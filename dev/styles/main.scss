@@ -1,0 +1,428 @@
+$blueTemplateColor: #00b1ff;
+$redTemplateColor: #ef5b5b;
+$greyTextColor: #777777;
+$goldenTextColor: #ffc811;
+
+@import 'bootstrap/bootstrap-reboot';
+@import 'bootstrap/bootstrap';
+@import 'bootstrap/bootstrap-grid';
+@import 'slick-slider-styles';
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,700|Poppins:400,500,600|Raleway:400,600,700');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic');
+
+//font-family: 'Montserrat', sans-serif;
+//font-family: 'Open Sans', sans-serif;
+//font-family: 'Poppins', sans-serif;
+//font-family: 'Raleway', sans-serif;
+//font-family: 'Marck Script', cursive;
+
+// svg rules
+.cls-1 {
+  fill: $blueTemplateColor
+}
+
+.cls-2 {
+  fill: $redTemplateColor;
+}
+
+.cls-3 {
+  fill: #fff;
+}
+
+//
+
+body {
+  font: 16px/1 'Montserrat', sans-serif;
+
+  h2 {
+    font: 28px 'Marck Script', cursive;
+    color: $redTemplateColor;
+    text-transform: capitalize;
+    margin: 6px 0;
+  }
+
+  h3 {
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin: 10px 0;
+  }
+
+  h4 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  p {
+    color: $greyTextColor;
+    line-height: 1.75em;
+    margin: 16px 0;
+  }
+
+  .wrapper-1170 {
+    width: 1170px;
+    margin: 0 auto;
+  }
+
+  .section-head {
+    text-align: center;
+    margin-bottom: 60px;
+  }
+}
+
+.container, .container-fluid {
+  padding: 0;
+}
+
+header {
+  position: relative;
+}
+
+header.container {
+  .navbar {
+    padding: 30px 0;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    .navbar-collapse, .btn {
+      font-weight: 900;
+    }
+  }
+
+  .logo {
+    &:hover {
+      text-decoration: none;
+    }
+
+    display: flex;
+    align-items: center;
+
+    #logo-svg, .logo-text {
+      display: inline-block;
+    }
+
+    .logo-text {
+      margin-left: 10px;
+      color: #000;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 16px;
+      font-weight: 700;
+      margin: 0;
+    }
+
+    span {
+      font-size: 12px;
+    }
+  }
+
+  .navbar-nav {
+    li {
+      margin-right: 10px;
+    }
+  }
+}
+
+.hero-section {
+  position: relative;
+  z-index: 10;
+
+  .hero-section-slider {
+    .text-container {
+      display: table;
+      margin-top: 16.66%;
+      margin-left: 18.23%;
+      background-color: rgba(255, 255, 255, 0.7);
+      border: 2px solid #252525;
+      border-radius: 25px;
+      padding: 25px;
+
+      strong {
+        font-size: 24px;
+        text-transform: capitalize;
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 32px;
+        margin: 16px 0;
+      }
+
+      h3 {
+        margin: 15px 0;
+      }
+    }
+
+    .slider-girl {
+      background: url("../images/hero-bg-girl.jpg") no-repeat center;
+    }
+
+    .slider-beach {
+      background: url("../images/hero-bg-beach.jpg") no-repeat center;
+    }
+
+    .slider-snowboard {
+      background: url("../images/hero-bg-snowboard.jpg") no-repeat center;
+    }
+
+    .slider-great-wall {
+      background: url("../images/hero-bg-great-wall.jpg") no-repeat center;
+    }
+
+    .slider-dubai {
+      background: url("../images/hero-bg-dubai.jpg") no-repeat center;
+    }
+
+    .slider-india {
+      background: url("../images/hero-bg-india.jpg") no-repeat center;
+    }
+
+    .slider-rocks {
+      background: url("../images/hero-bg-rocks.jpg") no-repeat center;
+    }
+
+    .slider-snowboard, .slider-beach, .slider-dubai, .slider-girl, .slider-great-wall, .slider-india, .slider-rocks {
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+
+
+}
+
+
+.feature-trip-section {
+  padding: 80px 0;
+  //position: relative;
+
+  .travel-cards-container {
+    //margin: -460px 0 0 300px;
+    //position: absolute;
+    //top: -460px;
+    //left: 300px;
+  }
+
+  & > div {
+    max-width: 270px;
+  }
+
+  & .travel-card {
+    display: inline-block;
+
+    &:nth-child(2) {
+      margin: 0 15px;
+    }
+  }
+}
+
+.travel-card {
+  //width: 31.62%;
+  width: 370px;
+  height: 580px;
+  border: 1px solid $greyTextColor;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.8);
+
+
+  img {
+    //width: 100%;
+    height: 400px;
+    border-bottom: 2px solid $greyTextColor;
+  }
+
+  .info-block {
+    padding: 15px;
+    max-height: 130px;
+
+
+    h4 {
+      display: inline-block;
+    }
+
+    .current-price {
+      float: right;
+      color: $blueTemplateColor;
+      font-weight: 900;
+    }
+
+    .past-price {
+      float: right;
+      color: $redTemplateColor;
+      margin-right: 10px;
+      text-decoration: line-through;
+      font-weight: 600;
+    }
+
+    p {
+      line-height: 1.5em;
+      margin: 0;
+      //overflow: hidden;
+      //text-overflow: ellipsis;
+      //white-space: nowrap
+    }
+  }
+
+  .rating-block {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid $greyTextColor;
+    box-sizing: border-box;
+    height: 48px;
+
+    .rating-stars {
+      font-weight: 500;
+    }
+
+    .stars {
+      display: flex;
+
+      .stars__state {
+        display: none;
+      }
+
+      .stars__star {
+        width: 26px;
+        height: 24px;
+        margin: 0;
+        background: url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='80'%20height='30'%3E%3Cpath%20d='M17.5,12.5h-8.5l6.8,5-2.6,8.1,6.8-5,6.8,5-2.6-8.1,6.8-5h-8.5l-2.6-8.1z'%20fill='%23EFA1A5'%20stroke='%23EFA1A5'/%3E%3Cpath%20d='M57.5,12.5h-8.5l6.8,5-2.6,8.1,6.8-5,6.8,5-2.6-8.1,6.8-5h-8.5l-2.6-8.1z'%20fill='%23EF5B5B'%20stroke='%23B24D4D'/%3E%3C/svg%3E");
+        background-position: -47px -3px;;
+      }
+
+      .stars__state:checked ~ .stars__star {
+        background-position: -7px -3px;
+      }
+
+      .stars:hover > label.stars__star {
+        background-position: -47px -3px;
+      }
+
+      .stars__star:hover ~ label.stars__star {
+        background-position: -7px -3px;
+      }
+    }
+  }
+}
+
+.section-convenience {
+  background: $greyTextColor url("../images/girl-on-the-beach.jpg") center no-repeat;
+  //background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.2) 100%), url("../images/girl-on-the-beach.jpg") center no-repeat;
+
+  .wrapper-1170 {
+    padding: 80px 0;
+    opacity: 1;
+
+    h2, h3 {
+      text-align: center;
+    }
+
+    .section-convenience-slider {
+      article {
+        box-sizing: border-box;
+        margin-: 0 15px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        width: 370px;
+        height: 400px;
+        border: 1px solid $greyTextColor;
+        border-radius: 10px;
+        overflow: hidden;
+        //background-color: rgba(239,91,91,0.6) ;
+        background-color: rgba(255, 255, 255, 0.75);
+
+        p {
+          color: #000;
+        }
+      }
+    }
+  }
+}
+
+.section-why-choose-us {
+  padding: 80px 0;
+
+  .accordion {
+    padding: 0 20%;
+
+    .card-header {
+      .btn {
+        margin-left: 40px;
+        font-weight: 600;
+        color: $blueTemplateColor;
+      }
+    }
+  }
+}
+
+.section-tour-packages {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/tour-package.jpg") top center no-repeat;
+  padding: 80px 0;
+
+  .travel-card {
+    margin: 0 15px;
+  }
+
+  .section-head {
+    margin: 80px 0;
+  }
+
+  .form-custom-package {
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  .section-head {
+    h3 {
+      font-size: 24px;
+      color: #fff;
+    }
+  }
+}
+
+// EMPTY SECTION!!! WAIT FOR PARALLAX EFFECT LESSONS!!!
+.section-best-places {
+  height: 500px;
+}
+
+// ****************************************************
+
+.section-awards {
+  padding: 80px 0;
+  background-color: $redTemplateColor;
+
+  .row {
+    div {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+
+      i {
+        font-size: 56px;
+        color: $goldenTextColor;
+      }
+
+      .award-wrapper {
+        display: inline-block;
+        color: #fff;
+
+        h3 {
+          font-size: 48px;
+          margin: 0;
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
