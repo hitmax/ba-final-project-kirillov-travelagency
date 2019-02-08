@@ -16,6 +16,17 @@ $goldenTextColor: #ffc811;
 //font-family: 'Raleway', sans-serif;
 //font-family: 'Marck Script', cursive;
 
+//@mixin card {
+//  //width: 31.62%;
+//  width: 100%;
+//  margin: 5px;
+//  border: 1px solid $greyTextColor;
+//  border-radius: 8px;
+//  overflow: hidden;
+//  background-color: rgba(255, 255, 255, 0.8);
+//}
+
+
 // svg rules
 .cls-1 {
   fill: $blueTemplateColor
@@ -31,65 +42,53 @@ $goldenTextColor: #ffc811;
 
 //
 
-body {
+html, body {
   font: 16px/1 'Montserrat', sans-serif;
+  @media screen and (max-width: 991px) {
+    font-size: 14px;
+  }
+  @media screen and (max-width: 767px) {
+    font-size: 12px;
+  }
+  @media screen and (max-width: 575px) {
+    font-size: 10px;
+  }
 
   h2 {
-    font: 28px 'Marck Script', cursive;
+    font: 1.75rem 'Marck Script', cursive;
     color: $redTemplateColor;
     text-transform: capitalize;
-    margin: 6px 0;
+    //margin: 6px 0;
+    margin: 0.5rem 0;
   }
 
   h3 {
-    font-size: 20px;
+    font-size: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    margin: 10px 0;
+    //margin: 10px 0;
+    margin: 0.75rem 0;
+    //@media screen and (max-width: 991px) {
+    //  font-size: 16px;
+    //}
   }
 
   h4 {
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
   }
 
   p {
     color: $greyTextColor;
-    line-height: 1.75em;
-    margin: 16px 0;
+    line-height: 1.75rem;
+    //margin: 16px 0;
+    margin: 1rem 0;
   }
 
-  .wrapper-1170 {
-    width: 1170px;
-    margin: 0 auto;
-  }
-
-  .section-head {
-    text-align: center;
-    margin-bottom: 60px;
-  }
-}
-
-.container, .container-fluid {
-  padding: 0;
-}
-
-header {
-  position: relative;
-}
-
-header.container {
-  .navbar {
-    padding: 30px 0;
-    position: absolute;
-    top: 0;
-    z-index: 10;
-    width: 100%;
-
-    .navbar-collapse, .btn {
-      font-weight: 900;
-    }
-  }
+  //.wrapper-1170 {
+  //  width: 1170px;
+  //  margin: 0 auto;
+  //}
 
   .logo {
     &:hover {
@@ -104,25 +103,78 @@ header.container {
     }
 
     .logo-text {
-      margin-left: 10px;
+      //margin-left: 10px;
+      margin-left: 0.75rem;
       color: #000;
       text-align: center;
-    }
 
-    h1 {
-      font-size: 16px;
-      font-weight: 700;
-      margin: 0;
-    }
 
-    span {
-      font-size: 12px;
+      h1 {
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 0;
+      }
+
+      span {
+        font-size: 0.75rem;
+      }
     }
   }
 
+  .section-head {
+    text-align: center;
+    //margin-bottom: 60px;
+    margin-bottom: 4rem;
+    @media screen and (max-width: 991.98px) {
+      //margin-bottom: 32px;
+      margin-bottom: 2rem;
+    }
+    @media screen and (max-width: 767.98px) {
+      //margin-bottom: 24px;
+      margin-bottom: 1.5rem;
+    }
+    @media screen and (max-width: 575.98px) {
+      //margin-bottom: 16px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .container, .container-fluid {
+    padding: 0;
+  }
+
+  //section:not(.hero-section):not(.section-get-apps) {
+  section:not(.hero-section){
+    //padding: 5rem 0 !important;
+    padding: 5rem 0;
+  }
+}
+
+
+
+header {
+  position: relative;
+}
+
+header.container {
+  .navbar {
+    //padding: 30px 0;
+    padding: 2rem 0;
+    position: absolute;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+
+    .navbar-collapse, .btn {
+      font-weight: 900;
+    }
+  }
+
+
   .navbar-nav {
     li {
-      margin-right: 10px;
+      //margin-right: 10px;
+      margin-right: 0.75rem;
     }
   }
 }
@@ -139,55 +191,69 @@ header.container {
       background-color: rgba(255, 255, 255, 0.7);
       border: 2px solid #252525;
       border-radius: 25px;
-      padding: 25px;
+      //padding: 25px;
+      padding: 1.5rem;
 
       strong {
-        font-size: 24px;
+        font-size: 1.5rem;
         text-transform: capitalize;
-        margin-bottom: 15px;
+        //margin-bottom: 15px;
+        margin-bottom: 1rem;
       }
 
       h2 {
-        font-size: 32px;
-        margin: 16px 0;
+        font-size: 2rem;
+        //margin: 16px 0;
+        margin: 1rem 0;
       }
 
       h3 {
-        margin: 15px 0;
+        //margin: 15px 0;
+        margin: 1rem 0;
       }
     }
 
     .slider-girl {
-      background: url("../images/hero-bg-girl.jpg") no-repeat center;
+      background: url("../images/hero-bg-girl.jpg") no-repeat;
     }
 
     .slider-beach {
-      background: url("../images/hero-bg-beach.jpg") no-repeat center;
+      background: url("../images/hero-bg-beach.jpg") no-repeat;
     }
 
     .slider-snowboard {
-      background: url("../images/hero-bg-snowboard.jpg") no-repeat center;
+      background: url("../images/hero-bg-snowboard.jpg") no-repeat;
     }
 
     .slider-great-wall {
-      background: url("../images/hero-bg-great-wall.jpg") no-repeat center;
+      background: url("../images/hero-bg-great-wall.jpg") no-repeat;
     }
 
     .slider-dubai {
-      background: url("../images/hero-bg-dubai.jpg") no-repeat center;
+      background: url("../images/hero-bg-dubai.jpg") no-repeat;
     }
 
     .slider-india {
-      background: url("../images/hero-bg-india.jpg") no-repeat center;
+      background: url("../images/hero-bg-india.jpg") no-repeat;
     }
 
     .slider-rocks {
-      background: url("../images/hero-bg-rocks.jpg") no-repeat center;
+      background: url("../images/hero-bg-rocks.jpg") no-repeat;
     }
 
     .slider-snowboard, .slider-beach, .slider-dubai, .slider-girl, .slider-great-wall, .slider-india, .slider-rocks {
-      height: 100vh;
-      width: 100vw;
+      @media screen and (orientation: landscape) {
+        height: 100vh;
+        min-height: 700px;
+        width: 100vw;
+        background-size: cover;
+        background-position: center;
+      }
+      @media screen and (orientation: portrait) {
+        width: 100%;
+        height: auto;
+        background-size: cover;
+      }
     }
   }
 
@@ -196,38 +262,62 @@ header.container {
 
 
 .feature-trip-section {
-  padding: 80px 0;
-  //position: relative;
+  //padding: 80px 0;
+  position: relative;
 
   .travel-cards-container {
-    //margin: -460px 0 0 300px;
-    //position: absolute;
-    //top: -460px;
-    //left: 300px;
+    position: inherit;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  & > div {
-    max-width: 270px;
+  @media screen and (min-width: 1770px) {
+    padding: 80px 20px !important;
+    max-height: 540px;
+    .section-head {
+      max-width: 270px;
+      text-align: left;
+    }
+    .travel-cards-container {
+      //margin: -460px 0 0 300px;
+      //position: absolute;
+      top: -540px;
+      left: 300px;
+      z-index: 20;
+    }
+
   }
+
 
   & .travel-card {
     display: inline-block;
 
-    &:nth-child(2) {
-      margin: 0 15px;
-    }
   }
 }
 
 .travel-card {
   //width: 31.62%;
   width: 370px;
-  height: 580px;
+  margin: 5px;
   border: 1px solid $greyTextColor;
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
+  @media screen and (max-width: 767px) {
+    width: 310px;
+  }
 
+  //.travel-card {
+  // @include card;
+  //}
+  //
+  //.random-container {
+  //  .travel-card {
+  //    @include card;
+  //    width: 370px;
+  //  }
+  //}
 
   img {
     //width: 100%;
@@ -259,7 +349,7 @@ header.container {
     }
 
     p {
-      line-height: 1.5em;
+      line-height: 1.5rem;
       margin: 0;
       //overflow: hidden;
       //text-overflow: ellipsis;
@@ -311,10 +401,11 @@ header.container {
 
 .section-convenience {
   background: $greyTextColor url("../images/girl-on-the-beach.jpg") center no-repeat;
+  background-size: cover;
   //background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.2) 100%), url("../images/girl-on-the-beach.jpg") center no-repeat;
 
-  .wrapper-1170 {
-    padding: 80px 0;
+  .container {
+    //padding: 80px 0;
     opacity: 1;
 
     h2, h3 {
@@ -324,8 +415,8 @@ header.container {
     .section-convenience-slider {
       article {
         box-sizing: border-box;
-        margin-: 0 15px;
-        padding: 20px;
+        margin: 0 0.5rem;
+        padding: 1rem;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -337,6 +428,17 @@ header.container {
         overflow: hidden;
         //background-color: rgba(239,91,91,0.6) ;
         background-color: rgba(255, 255, 255, 0.75);
+        @media screen and (max-width: 575px) {
+          height: 300px;
+        }
+        @media screen and (max-width: 479px) {
+          height: 220px;
+          padding: 1rem 5rem;
+        }
+        svg {
+          width: 6rem;
+          height: auto;
+        }
 
         p {
           color: #000;
@@ -347,10 +449,10 @@ header.container {
 }
 
 .section-why-choose-us {
-  padding: 80px 0;
+  //padding: 80px 0;
 
   .accordion {
-    padding: 0 20%;
+    padding: 0 14%;
 
     .card-header {
       .btn {
@@ -364,7 +466,7 @@ header.container {
 
 .section-tour-packages {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/tour-package.jpg") top center no-repeat;
-  padding: 80px 0;
+  //padding: 80px 0;
 
   .travel-card {
     margin: 0 15px;
@@ -381,7 +483,7 @@ header.container {
 
   .section-head {
     h3 {
-      font-size: 24px;
+      font-size: 1.5rem;
       color: #fff;
     }
   }
@@ -389,13 +491,53 @@ header.container {
 
 // EMPTY SECTION!!! WAIT FOR PARALLAX EFFECT LESSONS!!!
 .section-best-places {
-  height: 500px;
+  //padding: 80px 0;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/bg-world-map.png") top center no-repeat;
+
+  .row {
+    .col {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 50px;
+
+      img {
+        width: 30%;
+      }
+
+      .wrapper-country-info {
+        max-width: 60%;
+        margin-left: 10%;
+        //text-align: center;
+
+        .column {
+          column-count: 2;
+          column-gap: 10px;
+        }
+
+        a {
+          padding: 5px;
+          display: block;
+          text-decoration: none;
+          color: darken($greyTextColor, 30%);
+
+          &:hover {
+            color: $blueTemplateColor;
+          }
+
+          i {
+            padding-right: 10px;
+          }
+        }
+      }
+    }
+  }
 }
 
 // ****************************************************
 
 .section-awards {
-  padding: 80px 0;
+  //padding: 80px 0;
   background-color: $redTemplateColor;
 
   .row {
@@ -405,7 +547,7 @@ header.container {
       align-items: center;
 
       i {
-        font-size: 56px;
+        font-size: 3.5rem;
         color: $goldenTextColor;
       }
 
@@ -414,7 +556,7 @@ header.container {
         color: #fff;
 
         h3 {
-          font-size: 48px;
+          font-size: 3rem;
           margin: 0;
         }
 
@@ -424,5 +566,464 @@ header.container {
       }
     }
   }
+}
+
+// *************** EMPTY SECTION!!! *******************
+.section-video-tour {
+  height: 700px;
+}
+
+// ****************************************************
+
+.section-clients-feedback {
+  background-color: $blueTemplateColor;
+  min-height: 750px;
+  //padding: 80px 0;
+
+  .section-head {
+    h2 {
+      color: #000;
+    }
+
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .clients-feedback {
+
+    .nav-tabs {
+      border: none;
+
+      .nav-item {
+        display: flex;
+        align-items: center;
+
+
+        img {
+          width: 90px;
+          opacity: 0.7;
+          border-radius: 20px;
+
+          &:hover {
+            opacity: 1;
+          }
+        ;
+        }
+
+        .active {
+          img {
+            width: 120px;
+            opacity: 1;
+          }
+
+          &.nav-link {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    .tab-content {
+      border: 4px solid #fff;
+      border-radius: 20px;
+      padding: 40px;
+
+      .tab-pane {
+        color: #fff;
+
+        blockquote {
+          font-size: 1.25rem;
+        }
+
+        .feedback-footer {
+          text-align: center;
+
+          h3 {
+            font-size: 1.5rem;
+          }
+
+          h4 {
+            font-style: italic;
+            opacity: 0.8;
+            font-weight: 400;
+          }
+        }
+      }
+    }
+  }
+}
+
+.section-blog {
+  //padding: 80px 0;
+
+  .blog-grid {
+    .row {
+      margin-bottom: 40px;
+
+      .col {
+        a {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          &:hover {
+            text-decoration: none;
+
+            img {
+              opacity: 0.8;
+            }
+          }
+
+          img {
+            border-radius: 10px;
+          }
+
+          .wrapper-blog-content {
+            padding: 20px;
+
+            .wrapper-blog-date-time {
+              i {
+                color: $greyTextColor;
+
+                span {
+                  font: 1rem/1 'Montserrat', sans-serif;
+                }
+
+                &:last-child {
+                  float: right;
+                  margin-right: 40px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+  }
+}
+
+.section-get-apps {
+  //padding-top: 80px;
+  padding-bottom: 0 !important;
+
+  img {
+    width: 100%;
+  }
+
+  .col:last-child {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    h3 {
+      text-transform: uppercase;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    p {
+      text-align: center;
+    }
+
+    .buttons-wrapper {
+      a {
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        text-decoration: none;
+        color: #fff;
+        background-color: $redTemplateColor;
+        width: 200px;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 20px;
+
+        i {
+          font-size: 4rem;
+          display: block;
+        }
+
+        .available-in {
+          span {
+            text-transform: capitalize;
+            display: block;
+            margin-bottom: 6px;
+          }
+
+          strong {
+            text-transform: uppercase;
+            display: block;
+          }
+        ;
+        }
+      }
+    }
+  }
+}
+
+.section-partners {
+  padding: 160px 0 0 0 !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%), url("../images/bg-beach.jpg") center no-repeat;
+
+  .section-head {
+    h3 {
+      color: #fff;
+    }
+  }
+
+  .logo-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 160px;
+  }
+
+  .subscribe-email {
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 80px 0;
+
+    .col:last-child {
+      font-size: 0;
+
+      input {
+        height: 80px;
+        width: 85.2%;
+        vertical-align: top;
+        font-size: 1.25rem;
+
+        &[placeholder] {
+          padding-left: 20px;
+        }
+      }
+
+      button {
+        height: 80px;
+        width: 14.8%;
+        border: none;
+        font-size: 3rem;
+        color: #fff;
+        background-color: $blueTemplateColor;
+      }
+    }
+  }
+}
+
+.section-feedback-form {
+  //padding: 80px 0;
+
+  form {
+    .col {
+      padding: 0 20px;
+
+      .form-inline {
+        justify-content: space-between;
+      }
+
+      & > * {
+        margin-bottom: 10px;
+      }
+
+      input[type='submit'] {
+        width: 30%;
+      }
+
+      textarea {
+        resize: none;
+        height: 80%;
+      }
+    }
+  }
+}
+
+footer {
+  .container {
+    padding: 2rem 0;
+  }
+
+  .row {
+    div:nth-child(1) {
+
+      i {
+        font-size: 1.5rem;
+        color: $blueTemplateColor;
+        margin: 20px 20px 20px 0;
+      }
+    }
+
+    div:nth-child(2), div:nth-child(3) {
+      ul {
+        list-style: none;
+        padding: 0;
+
+        li {
+          text-transform: uppercase;
+          font-weight: 500;
+          //margin-top: 32px;
+          margin-top: 2rem;
+
+          a {
+            color: #000;
+
+            i {
+              //margin-right: 10px;
+              margin-right: 0.75rem;
+              color: $blueTemplateColor;
+              vertical-align: bottom;
+            }
+
+            &:hover {
+              text-decoration: none;
+              color: $blueTemplateColor;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .container-fluid {
+    background-color: $blueTemplateColor;
+    text-align: center;
+
+    span {
+      //line-height: 40px;
+      line-height: 2.5rem;
+      color: #fff;
+    }
+  }
+}
+
+
+// ************************** styles for TOUR-ENGLAND page ************************************
+.section-accordion-slider {
+  font-size: 0;
+
+  ul.accordion-slider {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 0;
+    margin: 0;
+    padding: 0;
+
+    &:hover li:nth-child(5) {
+      width: 50px;
+    }
+
+    li {
+      width: 3%;
+      overflow: hidden;
+      cursor: pointer;
+      display: block;
+      box-shadow: 1px 3px 10px $greyTextColor;
+      transition: all 2s;
+
+      img {
+        height: 100%;
+        width: 76vw;
+      }
+
+      &:hover {
+        width: 76.5%;
+        box-shadow: 1px 3px 10px $blueTemplateColor;
+        transition: all 0.5s;
+      }
+
+      &:nth-child(5) {
+        width: 76.5%;
+
+        &:hover {
+          width: 76.5%;
+        }
+      }
+    }
+  }
+}
+
+.section-tour-information {
+  padding: 40px 0;
+
+  .tour-description, .tour-specification {
+    padding: 40px 0;
+    border-bottom: 2px solid $greyTextColor;
+    @media screen and (max-width: 767.98px) {
+      h4 {
+        font-size: 1rem;
+        text-align: center;
+      }
+    }
+
+    .col {
+      padding: 1rem;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+
+  .tour-description {
+    & .col:last-child {
+      border: 1px solid $greyTextColor;
+    }
+  }
+
+  .tour-specification {
+    line-height: 2rem;
+
+    strong {
+      i {
+        font-size: 2rem;
+        vertical-align: sub;
+        color: $blueTemplateColor;
+      }
+    }
+
+    span {
+      color: $greyTextColor;
+    }
+  }
+
+  .tour-route {
+    padding: 40px 0;
+
+    .accordion {
+      .card:first-child i {
+        color: $redTemplateColor;
+      }
+
+      .card:last-child i {
+        color: #009900;
+      }
+
+      h3 {
+        i {
+          text-align: center;
+          margin-left: 20px;
+          min-width: 40px;
+          color: $blueTemplateColor;
+          font-size: 2rem;
+          vertical-align: sub;
+
+        }
+
+        strong {
+          color: $blueTemplateColor;
+        }
+      }
+    }
+  }
+}
+
+.section-tour-order-form {
+  font-size: 4rem;
 }
 

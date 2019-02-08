@@ -15291,11 +15291,17 @@ html {
 .slick-dots {
   position: absolute;
   bottom: 50px;
-  left: 10%;
+  left: calc(50% - 125px);
   list-style: none;
   display: block;
   padding: 0;
   margin: 0;
+}
+@media screen and (min-width: 1770px) {
+  .slick-dots {
+    bottom: 50px;
+    left: 12%;
+  }
 }
 .slick-dots li {
   position: relative;
@@ -15359,6 +15365,7 @@ html {
   padding: 0;
   border: none;
   outline: none;
+  z-index: 10;
 }
 .slick-prev:hover, .slick-prev:focus,
 .slick-next:hover,
@@ -15387,12 +15394,22 @@ html {
 .slick-prev {
   left: -50px;
 }
+@media screen and (max-width: 1280px) {
+  .slick-prev {
+    left: -20px;
+  }
+}
 .slick-prev:before {
   content: "<";
 }
 
 .slick-next {
   right: -50px;
+}
+@media screen and (max-width: 1280px) {
+  .slick-next {
+    right: -20px;
+  }
 }
 .slick-next:before {
   content: ">";
@@ -15410,41 +15427,92 @@ html {
   fill: #fff;
 }
 
-body {
+html, body {
   font: 16px/1 "Montserrat", sans-serif;
 }
-body h2 {
-  font: 28px "Marck Script", cursive;
+@media screen and (max-width: 991px) {
+  html, body {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 767px) {
+  html, body {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 575px) {
+  html, body {
+    font-size: 10px;
+  }
+}
+html h2, body h2 {
+  font: 1.75rem "Marck Script", cursive;
   color: #ef5b5b;
   text-transform: capitalize;
-  margin: 6px 0;
+  margin: 0.5rem 0;
 }
-body h3 {
-  font-size: 20px;
+html h3, body h3 {
+  font-size: 1.5rem;
   font-weight: 600;
   text-transform: capitalize;
-  margin: 10px 0;
+  margin: 0.75rem 0;
 }
-body h4 {
-  font-size: 18px;
+html h4, body h4 {
+  font-size: 1.125rem;
   font-weight: 700;
 }
-body p {
+html p, body p {
   color: #777777;
-  line-height: 1.75em;
-  margin: 16px 0;
+  line-height: 1.75rem;
+  margin: 1rem 0;
 }
-body .wrapper-1170 {
-  width: 1170px;
-  margin: 0 auto;
+html .logo, body .logo {
+  display: flex;
+  align-items: center;
 }
-body .section-head {
+html .logo:hover, body .logo:hover {
+  text-decoration: none;
+}
+html .logo #logo-svg, html .logo .logo-text, body .logo #logo-svg, body .logo .logo-text {
+  display: inline-block;
+}
+html .logo .logo-text, body .logo .logo-text {
+  margin-left: 0.75rem;
+  color: #000;
   text-align: center;
-  margin-bottom: 60px;
 }
-
-.container, .container-fluid {
+html .logo .logo-text h1, body .logo .logo-text h1 {
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 0;
+}
+html .logo .logo-text span, body .logo .logo-text span {
+  font-size: 0.75rem;
+}
+html .section-head, body .section-head {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+@media screen and (max-width: 991.98px) {
+  html .section-head, body .section-head {
+    margin-bottom: 2rem;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  html .section-head, body .section-head {
+    margin-bottom: 1.5rem;
+  }
+}
+@media screen and (max-width: 575.98px) {
+  html .section-head, body .section-head {
+    margin-bottom: 1rem;
+  }
+}
+html .container, html .container-fluid, body .container, body .container-fluid {
   padding: 0;
+}
+html section:not(.hero-section), body section:not(.hero-section) {
+  padding: 5rem 0;
 }
 
 header {
@@ -15452,7 +15520,7 @@ header {
 }
 
 header.container .navbar {
-  padding: 30px 0;
+  padding: 2rem 0;
   position: absolute;
   top: 0;
   z-index: 10;
@@ -15461,31 +15529,8 @@ header.container .navbar {
 header.container .navbar .navbar-collapse, header.container .navbar .btn {
   font-weight: 900;
 }
-header.container .logo {
-  display: flex;
-  align-items: center;
-}
-header.container .logo:hover {
-  text-decoration: none;
-}
-header.container .logo #logo-svg, header.container .logo .logo-text {
-  display: inline-block;
-}
-header.container .logo .logo-text {
-  margin-left: 10px;
-  color: #000;
-  text-align: center;
-}
-header.container .logo h1 {
-  font-size: 16px;
-  font-weight: 700;
-  margin: 0;
-}
-header.container .logo span {
-  font-size: 12px;
-}
 header.container .navbar-nav li {
-  margin-right: 10px;
+  margin-right: 0.75rem;
 }
 
 .hero-section {
@@ -15499,66 +15544,98 @@ header.container .navbar-nav li {
   background-color: rgba(255, 255, 255, 0.7);
   border: 2px solid #252525;
   border-radius: 25px;
-  padding: 25px;
+  padding: 1.5rem;
 }
 .hero-section .hero-section-slider .text-container strong {
-  font-size: 24px;
+  font-size: 1.5rem;
   text-transform: capitalize;
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 .hero-section .hero-section-slider .text-container h2 {
-  font-size: 32px;
-  margin: 16px 0;
+  font-size: 2rem;
+  margin: 1rem 0;
 }
 .hero-section .hero-section-slider .text-container h3 {
-  margin: 15px 0;
+  margin: 1rem 0;
 }
 .hero-section .hero-section-slider .slider-girl {
-  background: url("../images/hero-bg-girl.jpg") no-repeat center;
+  background: url("../images/hero-bg-girl.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-beach {
-  background: url("../images/hero-bg-beach.jpg") no-repeat center;
+  background: url("../images/hero-bg-beach.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-snowboard {
-  background: url("../images/hero-bg-snowboard.jpg") no-repeat center;
+  background: url("../images/hero-bg-snowboard.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-great-wall {
-  background: url("../images/hero-bg-great-wall.jpg") no-repeat center;
+  background: url("../images/hero-bg-great-wall.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-dubai {
-  background: url("../images/hero-bg-dubai.jpg") no-repeat center;
+  background: url("../images/hero-bg-dubai.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-india {
-  background: url("../images/hero-bg-india.jpg") no-repeat center;
+  background: url("../images/hero-bg-india.jpg") no-repeat;
 }
 .hero-section .hero-section-slider .slider-rocks {
-  background: url("../images/hero-bg-rocks.jpg") no-repeat center;
+  background: url("../images/hero-bg-rocks.jpg") no-repeat;
 }
-.hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
-  height: 100vh;
-  width: 100vw;
+@media screen and (orientation: landscape) {
+  .hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
+    height: 100vh;
+    min-height: 700px;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+  }
+}
+@media screen and (orientation: portrait) {
+  .hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
+    width: 100%;
+    height: auto;
+    background-size: cover;
+  }
 }
 
 .feature-trip-section {
-  padding: 80px 0;
+  position: relative;
 }
-.feature-trip-section > div {
-  max-width: 270px;
+.feature-trip-section .travel-cards-container {
+  position: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+@media screen and (min-width: 1770px) {
+  .feature-trip-section {
+    padding: 80px 20px !important;
+    max-height: 540px;
+  }
+  .feature-trip-section .section-head {
+    max-width: 270px;
+    text-align: left;
+  }
+  .feature-trip-section .travel-cards-container {
+    top: -540px;
+    left: 300px;
+    z-index: 20;
+  }
 }
 .feature-trip-section .travel-card {
   display: inline-block;
 }
-.feature-trip-section .travel-card:nth-child(2) {
-  margin: 0 15px;
-}
 
 .travel-card {
   width: 370px;
-  height: 580px;
+  margin: 5px;
   border: 1px solid #777777;
   border-radius: 8px;
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.8);
+}
+@media screen and (max-width: 767px) {
+  .travel-card {
+    width: 310px;
+  }
 }
 .travel-card img {
   height: 400px;
@@ -15584,7 +15661,7 @@ header.container .navbar-nav li {
   font-weight: 600;
 }
 .travel-card .info-block p {
-  line-height: 1.5em;
+  line-height: 1.5rem;
   margin: 0;
 }
 .travel-card .rating-block {
@@ -15623,18 +15700,18 @@ header.container .navbar-nav li {
 
 .section-convenience {
   background: #777777 url("../images/girl-on-the-beach.jpg") center no-repeat;
+  background-size: cover;
 }
-.section-convenience .wrapper-1170 {
-  padding: 80px 0;
+.section-convenience .container {
   opacity: 1;
 }
-.section-convenience .wrapper-1170 h2, .section-convenience .wrapper-1170 h3 {
+.section-convenience .container h2, .section-convenience .container h3 {
   text-align: center;
 }
-.section-convenience .wrapper-1170 .section-convenience-slider article {
+.section-convenience .container .section-convenience-slider article {
   box-sizing: border-box;
-  margin-: 0 15px;
-  padding: 20px;
+  margin: 0 0.5rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -15646,15 +15723,27 @@ header.container .navbar-nav li {
   overflow: hidden;
   background-color: rgba(255, 255, 255, 0.75);
 }
-.section-convenience .wrapper-1170 .section-convenience-slider article p {
+@media screen and (max-width: 575px) {
+  .section-convenience .container .section-convenience-slider article {
+    height: 300px;
+  }
+}
+@media screen and (max-width: 479px) {
+  .section-convenience .container .section-convenience-slider article {
+    height: 220px;
+    padding: 1rem 5rem;
+  }
+}
+.section-convenience .container .section-convenience-slider article svg {
+  width: 6rem;
+  height: auto;
+}
+.section-convenience .container .section-convenience-slider article p {
   color: #000;
 }
 
-.section-why-choose-us {
-  padding: 80px 0;
-}
 .section-why-choose-us .accordion {
-  padding: 0 20%;
+  padding: 0 14%;
 }
 .section-why-choose-us .accordion .card-header .btn {
   margin-left: 40px;
@@ -15664,7 +15753,6 @@ header.container .navbar-nav li {
 
 .section-tour-packages {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/tour-package.jpg") top center no-repeat;
-  padding: 80px 0;
 }
 .section-tour-packages .travel-card {
   margin: 0 15px;
@@ -15677,16 +15765,44 @@ header.container .navbar-nav li {
   background-color: rgba(255, 255, 255, 0.4);
 }
 .section-tour-packages .section-head h3 {
-  font-size: 24px;
+  font-size: 1.5rem;
   color: #fff;
 }
 
 .section-best-places {
-  height: 500px;
+  background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/bg-world-map.png") top center no-repeat;
+}
+.section-best-places .row .col {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 50px;
+}
+.section-best-places .row .col img {
+  width: 30%;
+}
+.section-best-places .row .col .wrapper-country-info {
+  max-width: 60%;
+  margin-left: 10%;
+}
+.section-best-places .row .col .wrapper-country-info .column {
+  column-count: 2;
+  column-gap: 10px;
+}
+.section-best-places .row .col .wrapper-country-info a {
+  padding: 5px;
+  display: block;
+  text-decoration: none;
+  color: #2b2b2b;
+}
+.section-best-places .row .col .wrapper-country-info a:hover {
+  color: #00b1ff;
+}
+.section-best-places .row .col .wrapper-country-info a i {
+  padding-right: 10px;
 }
 
 .section-awards {
-  padding: 80px 0;
   background-color: #ef5b5b;
 }
 .section-awards .row div {
@@ -15695,7 +15811,7 @@ header.container .navbar-nav li {
   align-items: center;
 }
 .section-awards .row div i {
-  font-size: 56px;
+  font-size: 3.5rem;
   color: #ffc811;
 }
 .section-awards .row div .award-wrapper {
@@ -15703,11 +15819,341 @@ header.container .navbar-nav li {
   color: #fff;
 }
 .section-awards .row div .award-wrapper h3 {
-  font-size: 48px;
+  font-size: 3rem;
   margin: 0;
 }
 .section-awards .row div .award-wrapper span {
   text-transform: uppercase;
+}
+
+.section-video-tour {
+  height: 700px;
+}
+
+.section-clients-feedback {
+  background-color: #00b1ff;
+  min-height: 750px;
+}
+.section-clients-feedback .section-head h2 {
+  color: #000;
+}
+.section-clients-feedback .section-head h3 {
+  color: #fff;
+}
+.section-clients-feedback .clients-feedback .nav-tabs {
+  border: none;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item {
+  display: flex;
+  align-items: center;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item img {
+  width: 90px;
+  opacity: 0.7;
+  border-radius: 20px;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item img:hover {
+  opacity: 1;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item .active img {
+  width: 120px;
+  opacity: 1;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item .active.nav-link {
+  border-bottom: none;
+}
+.section-clients-feedback .clients-feedback .tab-content {
+  border: 4px solid #fff;
+  border-radius: 20px;
+  padding: 40px;
+}
+.section-clients-feedback .clients-feedback .tab-content .tab-pane {
+  color: #fff;
+}
+.section-clients-feedback .clients-feedback .tab-content .tab-pane blockquote {
+  font-size: 1.25rem;
+}
+.section-clients-feedback .clients-feedback .tab-content .tab-pane .feedback-footer {
+  text-align: center;
+}
+.section-clients-feedback .clients-feedback .tab-content .tab-pane .feedback-footer h3 {
+  font-size: 1.5rem;
+}
+.section-clients-feedback .clients-feedback .tab-content .tab-pane .feedback-footer h4 {
+  font-style: italic;
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.section-blog .blog-grid .row {
+  margin-bottom: 40px;
+}
+.section-blog .blog-grid .row .col a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.section-blog .blog-grid .row .col a:hover {
+  text-decoration: none;
+}
+.section-blog .blog-grid .row .col a:hover img {
+  opacity: 0.8;
+}
+.section-blog .blog-grid .row .col a img {
+  border-radius: 10px;
+}
+.section-blog .blog-grid .row .col a .wrapper-blog-content {
+  padding: 20px;
+}
+.section-blog .blog-grid .row .col a .wrapper-blog-content .wrapper-blog-date-time i {
+  color: #777777;
+}
+.section-blog .blog-grid .row .col a .wrapper-blog-content .wrapper-blog-date-time i span {
+  font: 1rem/1 "Montserrat", sans-serif;
+}
+.section-blog .blog-grid .row .col a .wrapper-blog-content .wrapper-blog-date-time i:last-child {
+  float: right;
+  margin-right: 40px;
+}
+.section-blog .btn {
+  display: block;
+  margin: 0 auto;
+  width: 160px;
+}
+
+.section-get-apps {
+  padding-bottom: 0 !important;
+}
+.section-get-apps img {
+  width: 100%;
+}
+.section-get-apps .col:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.section-get-apps .col:last-child h3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+.section-get-apps .col:last-child p {
+  text-align: center;
+}
+.section-get-apps .col:last-child .buttons-wrapper a {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ef5b5b;
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px;
+  margin: 20px;
+}
+.section-get-apps .col:last-child .buttons-wrapper a i {
+  font-size: 4rem;
+  display: block;
+}
+.section-get-apps .col:last-child .buttons-wrapper a .available-in span {
+  text-transform: capitalize;
+  display: block;
+  margin-bottom: 6px;
+}
+.section-get-apps .col:last-child .buttons-wrapper a .available-in strong {
+  text-transform: uppercase;
+  display: block;
+}
+
+.section-partners {
+  padding: 160px 0 0 0 !important;
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%), url("../images/bg-beach.jpg") center no-repeat;
+}
+.section-partners .section-head h3 {
+  color: #fff;
+}
+.section-partners .logo-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 160px;
+}
+.section-partners .subscribe-email {
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 80px 0;
+}
+.section-partners .subscribe-email .col:last-child {
+  font-size: 0;
+}
+.section-partners .subscribe-email .col:last-child input {
+  height: 80px;
+  width: 85.2%;
+  vertical-align: top;
+  font-size: 1.25rem;
+}
+.section-partners .subscribe-email .col:last-child input[placeholder] {
+  padding-left: 20px;
+}
+.section-partners .subscribe-email .col:last-child button {
+  height: 80px;
+  width: 14.8%;
+  border: none;
+  font-size: 3rem;
+  color: #fff;
+  background-color: #00b1ff;
+}
+
+.section-feedback-form form .col {
+  padding: 0 20px;
+}
+.section-feedback-form form .col .form-inline {
+  justify-content: space-between;
+}
+.section-feedback-form form .col > * {
+  margin-bottom: 10px;
+}
+.section-feedback-form form .col input[type=submit] {
+  width: 30%;
+}
+.section-feedback-form form .col textarea {
+  resize: none;
+  height: 80%;
+}
+
+footer .container {
+  padding: 2rem 0;
+}
+footer .row div:nth-child(1) i {
+  font-size: 1.5rem;
+  color: #00b1ff;
+  margin: 20px 20px 20px 0;
+}
+footer .row div:nth-child(2) ul, footer .row div:nth-child(3) ul {
+  list-style: none;
+  padding: 0;
+}
+footer .row div:nth-child(2) ul li, footer .row div:nth-child(3) ul li {
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-top: 2rem;
+}
+footer .row div:nth-child(2) ul li a, footer .row div:nth-child(3) ul li a {
+  color: #000;
+}
+footer .row div:nth-child(2) ul li a i, footer .row div:nth-child(3) ul li a i {
+  margin-right: 0.75rem;
+  color: #00b1ff;
+  vertical-align: bottom;
+}
+footer .row div:nth-child(2) ul li a:hover, footer .row div:nth-child(3) ul li a:hover {
+  text-decoration: none;
+  color: #00b1ff;
+}
+footer .container-fluid {
+  background-color: #00b1ff;
+  text-align: center;
+}
+footer .container-fluid span {
+  line-height: 2.5rem;
+  color: #fff;
+}
+
+.section-accordion-slider {
+  font-size: 0;
+}
+.section-accordion-slider ul.accordion-slider {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  font-size: 0;
+  margin: 0;
+  padding: 0;
+}
+.section-accordion-slider ul.accordion-slider:hover li:nth-child(5) {
+  width: 50px;
+}
+.section-accordion-slider ul.accordion-slider li {
+  width: 3%;
+  overflow: hidden;
+  cursor: pointer;
+  display: block;
+  box-shadow: 1px 3px 10px #777777;
+  transition: all 2s;
+}
+.section-accordion-slider ul.accordion-slider li img {
+  height: 100%;
+  width: 76vw;
+}
+.section-accordion-slider ul.accordion-slider li:hover {
+  width: 76.5%;
+  box-shadow: 1px 3px 10px #00b1ff;
+  transition: all 0.5s;
+}
+.section-accordion-slider ul.accordion-slider li:nth-child(5) {
+  width: 76.5%;
+}
+.section-accordion-slider ul.accordion-slider li:nth-child(5):hover {
+  width: 76.5%;
+}
+
+.section-tour-information {
+  padding: 40px 0;
+}
+.section-tour-information .tour-description, .section-tour-information .tour-specification {
+  padding: 40px 0;
+  border-bottom: 2px solid #777777;
+}
+@media screen and (max-width: 767.98px) {
+  .section-tour-information .tour-description h4, .section-tour-information .tour-specification h4 {
+    font-size: 1rem;
+    text-align: center;
+  }
+}
+.section-tour-information .tour-description .col, .section-tour-information .tour-specification .col {
+  padding: 1rem;
+}
+.section-tour-information .tour-description .col img, .section-tour-information .tour-specification .col img {
+  width: 100%;
+}
+.section-tour-information .tour-description .col:last-child {
+  border: 1px solid #777777;
+}
+.section-tour-information .tour-specification {
+  line-height: 2rem;
+}
+.section-tour-information .tour-specification strong i {
+  font-size: 2rem;
+  vertical-align: sub;
+  color: #00b1ff;
+}
+.section-tour-information .tour-specification span {
+  color: #777777;
+}
+.section-tour-information .tour-route {
+  padding: 40px 0;
+}
+.section-tour-information .tour-route .accordion .card:first-child i {
+  color: #ef5b5b;
+}
+.section-tour-information .tour-route .accordion .card:last-child i {
+  color: #009900;
+}
+.section-tour-information .tour-route .accordion h3 i {
+  text-align: center;
+  margin-left: 20px;
+  min-width: 40px;
+  color: #00b1ff;
+  font-size: 2rem;
+  vertical-align: sub;
+}
+.section-tour-information .tour-route .accordion h3 strong {
+  color: #00b1ff;
+}
+
+.section-tour-order-form {
+  font-size: 4rem;
 }
 
 /*# sourceMappingURL=main.css.map */

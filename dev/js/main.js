@@ -22,7 +22,29 @@
             pauseOnHover: false,
             infinite: true,
             slidesToShow: 3,
-            slidesToScroll: 1
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1220,
+                    settings: {
+                        arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        // slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        fade: true,
+
+                        slidesToShow: 1
+                    }
+                }
+            ]
         });
         $('.section-tour-packages-slider').slick({
             centerMode: true,
