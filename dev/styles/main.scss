@@ -45,9 +45,10 @@ $goldenTextColor: #ffc811;
 }
 
 //
-* {
-  transition: all 0.5s;
-}
+
+//* {
+//  transition: all 0.5s;
+//}
 
 html, body {
   font: 16px/1 'Montserrat', sans-serif;
@@ -462,10 +463,28 @@ header.container {
     padding: 0 14%;
 
     .card-header {
+      svg {
+        width: 15%;
+      }
+
       .btn {
-        margin-left: 40px;
+        //margin-left: 2.5rem;
         font-weight: 600;
         color: $blueTemplateColor;
+        width: 100%;
+        text-align: start;
+
+        span {
+          @media screen and (max-width: 767px) {
+            font-size: 1rem;
+            margin-left: 0.5rem;
+          }
+          @media screen and (max-width: 575px) {
+            font-size: 1rem;
+            margin-left: 0.25rem;
+            letter-spacing: -0.7px;
+          }
+        }
       }
     }
   }
@@ -575,11 +594,12 @@ header.container {
   }
 }
 
-// *************** EMPTY SECTION!!! *******************
+// *************** SECTION NEED REPAIR!!! *******************
 .section-video-tour {
   background: url("../images/bg-plane.png") no-repeat;
   background-size: cover;
   height: 1980px;
+
   img {
     position: relative;
     width: 100%;

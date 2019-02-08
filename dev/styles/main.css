@@ -15427,10 +15427,6 @@ html {
   fill: #fff;
 }
 
-* {
-  transition: all 0.5s;
-}
-
 html, body {
   font: 16px/1 "Montserrat", sans-serif;
 }
@@ -15746,10 +15742,27 @@ header.container .navbar-nav li {
 .section-why-choose-us .accordion {
   padding: 0 14%;
 }
+.section-why-choose-us .accordion .card-header svg {
+  width: 15%;
+}
 .section-why-choose-us .accordion .card-header .btn {
-  margin-left: 40px;
   font-weight: 600;
   color: #00b1ff;
+  width: 100%;
+  text-align: start;
+}
+@media screen and (max-width: 767px) {
+  .section-why-choose-us .accordion .card-header .btn span {
+    font-size: 1rem;
+    margin-left: 0.5rem;
+  }
+}
+@media screen and (max-width: 575px) {
+  .section-why-choose-us .accordion .card-header .btn span {
+    font-size: 1rem;
+    margin-left: 0.25rem;
+    letter-spacing: -0.7px;
+  }
 }
 
 .section-tour-packages {
