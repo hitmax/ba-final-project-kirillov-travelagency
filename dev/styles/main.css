@@ -15515,15 +15515,14 @@ html section:not(.hero-section), body section:not(.hero-section) {
   padding: 5rem 0;
 }
 
-header {
+header.container {
   position: relative;
+  z-index: 1;
 }
-
 header.container .navbar {
   padding: 2rem 0;
   position: absolute;
   top: 0;
-  z-index: 10;
   width: 100%;
 }
 header.container .navbar .navbar-collapse, header.container .navbar .btn {
@@ -15535,7 +15534,6 @@ header.container .navbar-nav li {
 
 .hero-section {
   position: relative;
-  z-index: 10;
 }
 .hero-section .hero-section-slider .text-container {
   display: table;
@@ -15596,31 +15594,30 @@ header.container .navbar-nav li {
   }
 }
 
-.feature-trip-section {
+.section-feature-trip {
   position: relative;
 }
-.feature-trip-section .travel-cards-container {
+.section-feature-trip .travel-cards-container {
   position: inherit;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
 @media screen and (min-width: 1770px) {
-  .feature-trip-section {
+  .section-feature-trip {
     padding: 80px 20px !important;
     max-height: 540px;
   }
-  .feature-trip-section .section-head {
+  .section-feature-trip .section-head {
     max-width: 270px;
     text-align: left;
   }
-  .feature-trip-section .travel-cards-container {
+  .section-feature-trip .travel-cards-container {
     top: -540px;
     left: 300px;
-    z-index: 20;
   }
 }
-.feature-trip-section .travel-card {
+.section-feature-trip .travel-card {
   display: inline-block;
 }
 

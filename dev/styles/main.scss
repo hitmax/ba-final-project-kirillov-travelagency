@@ -1,3 +1,7 @@
+// ********* z-index ************
+//header   z-index: 1;
+
+
 $blueTemplateColor: #00b1ff;
 $redTemplateColor: #ef5b5b;
 $greyTextColor: #777777;
@@ -144,32 +148,33 @@ html, body {
   }
 
   //section:not(.hero-section):not(.section-get-apps) {
-  section:not(.hero-section){
+  section:not(.hero-section) {
     //padding: 5rem 0 !important;
     padding: 5rem 0;
   }
 }
 
 
-
 header {
-  position: relative;
+
 }
 
 header.container {
+  position: relative;
+  z-index: 1;
+
   .navbar {
     //padding: 30px 0;
     padding: 2rem 0;
     position: absolute;
     top: 0;
-    z-index: 10;
+    //z-index: 10;
     width: 100%;
 
     .navbar-collapse, .btn {
       font-weight: 900;
     }
   }
-
 
   .navbar-nav {
     li {
@@ -181,7 +186,7 @@ header.container {
 
 .hero-section {
   position: relative;
-  z-index: 10;
+  //z-index: 10;
 
   .hero-section-slider {
     .text-container {
@@ -261,7 +266,7 @@ header.container {
 }
 
 
-.feature-trip-section {
+.section-feature-trip {
   //padding: 80px 0;
   position: relative;
 
@@ -284,15 +289,13 @@ header.container {
       //position: absolute;
       top: -540px;
       left: 300px;
-      z-index: 20;
+      //z-index: 20;
     }
-
   }
 
 
   & .travel-card {
     display: inline-block;
-
   }
 }
 
@@ -435,6 +438,7 @@ header.container {
           height: 220px;
           padding: 1rem 5rem;
         }
+
         svg {
           width: 6rem;
           height: auto;
