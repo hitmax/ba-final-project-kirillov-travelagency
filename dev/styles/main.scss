@@ -45,6 +45,9 @@ $goldenTextColor: #ffc811;
 }
 
 //
+* {
+  transition: all 0.5s;
+}
 
 html, body {
   font: 16px/1 'Montserrat', sans-serif;
@@ -148,7 +151,7 @@ html, body {
   }
 
   //section:not(.hero-section):not(.section-get-apps) {
-  section:not(.hero-section) {
+  section:not(.hero-section):not(.section-video-tour) {
     //padding: 5rem 0 !important;
     padding: 5rem 0;
   }
@@ -574,14 +577,23 @@ header.container {
 
 // *************** EMPTY SECTION!!! *******************
 .section-video-tour {
-  height: 700px;
+  background: url("../images/bg-plane.png") no-repeat;
+  background-size: cover;
+  height: 1980px;
+  img {
+    position: relative;
+    width: 100%;
+    //opacity: 1;
+    z-index: -1;
+  }
 }
 
 // ****************************************************
 
 .section-clients-feedback {
-  background-color: $blueTemplateColor;
+  //background-color: $blueTemplateColor;
   min-height: 750px;
+  margin-top: -50%;
   //padding: 80px 0;
 
   .section-head {

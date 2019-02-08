@@ -15427,6 +15427,10 @@ html {
   fill: #fff;
 }
 
+* {
+  transition: all 0.5s;
+}
+
 html, body {
   font: 16px/1 "Montserrat", sans-serif;
 }
@@ -15511,7 +15515,7 @@ html .section-head, body .section-head {
 html .container, html .container-fluid, body .container, body .container-fluid {
   padding: 0;
 }
-html section:not(.hero-section), body section:not(.hero-section) {
+html section:not(.hero-section):not(.section-video-tour), body section:not(.hero-section):not(.section-video-tour) {
   padding: 5rem 0;
 }
 
@@ -15824,12 +15828,19 @@ header.container .navbar-nav li {
 }
 
 .section-video-tour {
-  height: 700px;
+  background: url("../images/bg-plane.png") no-repeat;
+  background-size: cover;
+  height: 1980px;
+}
+.section-video-tour img {
+  position: relative;
+  width: 100%;
+  z-index: -1;
 }
 
 .section-clients-feedback {
-  background-color: #00b1ff;
   min-height: 750px;
+  margin-top: -50%;
 }
 .section-clients-feedback .section-head h2 {
   color: #000;
