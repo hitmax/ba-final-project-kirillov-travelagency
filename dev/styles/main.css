@@ -15848,12 +15848,31 @@ header.container .navbar-nav li {
 }
 .section-awards .row div {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+@media screen and (min-width: 1139px) {
+  .section-awards .row div {
+    justify-content: space-around;
+  }
+}
+@media screen and (min-width: 992px) {
+  .section-awards .row div {
+    padding-right: 0;
+    padding-left: 0;
+  }
 }
 .section-awards .row div i {
   font-size: 3.5rem;
+  padding: 0 2rem;
   color: #ffc811;
+}
+@media screen and (min-width: 992px) {
+  .section-awards .row div i {
+    padding: 0 0.5rem;
+  }
 }
 .section-awards .row div .award-wrapper {
   display: inline-block;

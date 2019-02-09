@@ -178,7 +178,7 @@ header.container {
     border-left: 2px solid #252525;
     //z-index: 10;
     width: 100%;
-    background:rgba(255,255,255, 0.7);
+    background: rgba(255, 255, 255, 0.7);
 
     .navbar-collapse, .btn {
       font-weight: 900;
@@ -601,11 +601,24 @@ header.container {
   .row {
     div {
       display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+      padding-top: 15px;
+      padding-bottom: 15px;
+      @media screen and (min-width: 1139px) {
+        justify-content: space-around;
+      }
+      @media screen and (min-width: 992px) {
+        padding-right: 0;
+        padding-left: 0;
+      }
 
       i {
+        @media screen and (min-width: 992px) {
+          padding: 0 0.5rem;
+        }
         font-size: 3.5rem;
+        padding: 0 2rem;
         color: $goldenTextColor;
       }
 
@@ -641,6 +654,7 @@ header.container {
     //opacity: 1;
     z-index: -1;
   }
+
   a.button-play-wrapper {
     position: absolute;
     left: 12%;
@@ -655,6 +669,7 @@ header.container {
     @media screen and (max-width: 767px) {
       font-size: 2rem;
     }
+
     &:hover {
       text-shadow: 0px 0px 4rem $blueTemplateColor;
     }
@@ -666,10 +681,10 @@ header.container {
 .section-clients-feedback {
   margin: -2px 0;
   padding: 10px 0 !important;
-  background: rgb(125,197,253);
-  background: -moz-linear-gradient(top, #47C7FE 1%, rgba(31,186,255,1) 100%);
-  background: -webkit-linear-gradient(top, #47C7FE 1%,rgba(31,186,255,1) 100%);
-  background: linear-gradient(to bottom, #47C7FE 1%,rgba(31,186,255,1) 100%);
+  background: rgb(125, 197, 253);
+  background: -moz-linear-gradient(top, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
+  background: -webkit-linear-gradient(top, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
+  background: linear-gradient(to bottom, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
   //min-height: 750px;
   //margin-top: -50%;
   //padding: 80px 0;
