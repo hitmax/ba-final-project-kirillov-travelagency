@@ -15844,11 +15844,34 @@ header.container .navbar-nav li {
   background: url("../images/bg-plane-top.png") no-repeat;
   background-size: contain;
   background-position: bottom;
+  position: relative;
 }
 .section-video-tour img {
   position: relative;
   width: 100%;
   z-index: -1;
+}
+.section-video-tour a.button-play-wrapper {
+  position: absolute;
+  left: 12%;
+  top: 66%;
+  color: #fff;
+  font-size: 4rem;
+  text-decoration: none;
+}
+@media screen and (max-width: 991px) {
+  .section-video-tour a.button-play-wrapper {
+    font-size: 3rem;
+    top: 60%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .section-video-tour a.button-play-wrapper {
+    font-size: 2rem;
+  }
+}
+.section-video-tour a.button-play-wrapper:hover {
+  text-shadow: 0px 0px 4rem #00b1ff;
 }
 
 .section-clients-feedback {
