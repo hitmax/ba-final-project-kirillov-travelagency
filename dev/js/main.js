@@ -1,5 +1,6 @@
 ;(function ($) {
     $(function () {
+        const $textContainer = $('.text-container');
 
         $('.hero-section-slider').slick({
             arrows: false,
@@ -81,5 +82,8 @@
             ]
         });
 
+        $('.navbar-toggler').click(() => {
+            $textContainer.toggleClass('hidden');
+        });
     });
 })(jQuery);
