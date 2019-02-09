@@ -169,20 +169,52 @@ header.container {
 
   .navbar {
     //padding: 30px 0;
-    padding: 2rem 0;
+    padding: 2rem 1.5rem;
     position: absolute;
     top: 0;
+    border-radius: 0 0 25px 25px;
+    border-right: 2px solid #252525;
+    border-bottom: 2px solid #252525;
+    border-left: 2px solid #252525;
     //z-index: 10;
     width: 100%;
+    background:rgba(255,255,255, 0.7);
 
     .navbar-collapse, .btn {
       font-weight: 900;
+    }
+
+    .navbar-collapse {
+      position: relative;
+
+      &.show, &.collapsing {
+        margin-bottom: calc((1.5rem / 2) * -1);
+
+        .navbar-nav {
+          padding: 0.75rem 0 0;
+        }
+
+        .dropdown-menu.show {
+          display: flex;
+          flex-wrap: wrap;
+
+          .dropdown-item {
+            display: inline-block;
+            width: auto;
+          }
+        }
+
+        button {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+        }
+      }
     }
   }
 
   .navbar-nav {
     li {
-      //margin-right: 10px;
       margin-right: 0.75rem;
     }
   }
