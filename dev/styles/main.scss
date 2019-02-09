@@ -152,7 +152,7 @@ html, body {
   }
 
   //section:not(.hero-section):not(.section-get-apps) {
-  section:not(.hero-section):not(.section-video-tour) {
+  section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
     //padding: 5rem 0 !important;
     padding: 5rem 0;
   }
@@ -596,9 +596,11 @@ header.container {
 
 // *************** SECTION NEED REPAIR!!! *******************
 .section-video-tour {
-  background: url("../images/bg-plane.png") no-repeat;
-  background-size: cover;
-  height: 1980px;
+  background: url("../images/bg-plane-top.png") no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  //background-size: cover;
+  //height: 1980px;
 
   img {
     position: relative;
@@ -611,14 +613,20 @@ header.container {
 // ****************************************************
 
 .section-clients-feedback {
-  //background-color: $blueTemplateColor;
-  min-height: 750px;
-  margin-top: -50%;
+  margin: -2px 0;
+  padding: 10px 0 !important;
+  background: rgb(125,197,253);
+  background: -moz-linear-gradient(top, #47C7FE 1%, rgba(31,186,255,1) 100%);
+  background: -webkit-linear-gradient(top, #47C7FE 1%,rgba(31,186,255,1) 100%);
+  background: linear-gradient(to bottom, #47C7FE 1%,rgba(31,186,255,1) 100%);
+  //min-height: 750px;
+  //margin-top: -50%;
   //padding: 80px 0;
 
   .section-head {
     h2 {
       color: #000;
+      margin-top: 0;
     }
 
     h3 {
@@ -692,6 +700,9 @@ header.container {
 
 .section-blog {
   //padding: 80px 0;
+  background: url(../images/bg-plane-bottom.png) no-repeat;
+  background-size: contain;
+  background-position: top;
 
   .blog-grid {
     .row {

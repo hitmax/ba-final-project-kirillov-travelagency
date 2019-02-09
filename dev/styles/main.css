@@ -15511,7 +15511,7 @@ html .section-head, body .section-head {
 html .container, html .container-fluid, body .container, body .container-fluid {
   padding: 0;
 }
-html section:not(.hero-section):not(.section-video-tour), body section:not(.hero-section):not(.section-video-tour) {
+html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
   padding: 5rem 0;
 }
 
@@ -15841,9 +15841,9 @@ header.container .navbar-nav li {
 }
 
 .section-video-tour {
-  background: url("../images/bg-plane.png") no-repeat;
-  background-size: cover;
-  height: 1980px;
+  background: url("../images/bg-plane-top.png") no-repeat;
+  background-size: contain;
+  background-position: bottom;
 }
 .section-video-tour img {
   position: relative;
@@ -15852,11 +15852,16 @@ header.container .navbar-nav li {
 }
 
 .section-clients-feedback {
-  min-height: 750px;
-  margin-top: -50%;
+  margin: -2px 0;
+  padding: 10px 0 !important;
+  background: #7dc5fd;
+  background: -moz-linear-gradient(top, #47C7FE 1%, #1fbaff 100%);
+  background: -webkit-linear-gradient(top, #47C7FE 1%, #1fbaff 100%);
+  background: linear-gradient(to bottom, #47C7FE 1%, #1fbaff 100%);
 }
 .section-clients-feedback .section-head h2 {
   color: #000;
+  margin-top: 0;
 }
 .section-clients-feedback .section-head h3 {
   color: #fff;
@@ -15906,6 +15911,11 @@ header.container .navbar-nav li {
   font-weight: 400;
 }
 
+.section-blog {
+  background: url(../images/bg-plane-bottom.png) no-repeat;
+  background-size: contain;
+  background-position: top;
+}
 .section-blog .blog-grid .row {
   margin-bottom: 40px;
 }
