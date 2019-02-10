@@ -15941,9 +15941,14 @@ header.container .navbar-nav li {
 .section-clients-feedback .clients-feedback .nav-tabs .nav-item {
   display: flex;
   align-items: center;
+  text-align: center;
+  width: 13%;
+}
+.section-clients-feedback .clients-feedback .nav-tabs .nav-item .nav-link {
+  padding: 0.8rem 0.3rem;
 }
 .section-clients-feedback .clients-feedback .nav-tabs .nav-item img {
-  width: 90px;
+  width: 80%;
   opacity: 0.7;
   border-radius: 20px;
 }
@@ -15951,7 +15956,7 @@ header.container .navbar-nav li {
   opacity: 1;
 }
 .section-clients-feedback .clients-feedback .nav-tabs .nav-item .active img {
-  width: 120px;
+  width: 100%;
   opacity: 1;
 }
 .section-clients-feedback .clients-feedback .nav-tabs .nav-item .active.nav-link {
@@ -15959,8 +15964,8 @@ header.container .navbar-nav li {
 }
 .section-clients-feedback .clients-feedback .tab-content {
   border: 4px solid #fff;
-  border-radius: 20px;
-  padding: 40px;
+  border-radius: 1rem;
+  padding: 2.5rem;
 }
 .section-clients-feedback .clients-feedback .tab-content .tab-pane {
   color: #fff;
