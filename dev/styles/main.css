@@ -16030,6 +16030,16 @@ header.container .navbar-nav li {
 .section-get-apps {
   padding-bottom: 0 !important;
 }
+@media screen and (max-width: 440px) {
+  .section-get-apps {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/get-apps-hand-iphone.png") no-repeat bottom;
+    background-size: contain;
+    padding-bottom: 5rem !important;
+  }
+  .section-get-apps .row > .col {
+    display: none;
+  }
+}
 .section-get-apps img {
   width: 100%;
 }
@@ -16043,34 +16053,69 @@ header.container .navbar-nav li {
   text-transform: uppercase;
   font-size: 2rem;
   font-weight: 700;
+  text-align: center;
 }
 .section-get-apps .col:last-child p {
   text-align: center;
+  margin: 2rem 0;
+  color: #000;
+}
+.section-get-apps .col:last-child .buttons-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .section-get-apps .col:last-child .buttons-wrapper a {
   display: inline-flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   text-decoration: none;
   color: #fff;
   background-color: #ef5b5b;
-  width: 200px;
+  width: 45%;
   border-radius: 20px;
-  padding: 10px;
-  margin: 20px;
+  padding: 0.75rem;
+}
+.section-get-apps .col:last-child .buttons-wrapper a:hover {
+  opacity: 0.9;
+  box-shadow: 0 0 1.5rem #a11010;
+}
+.section-get-apps .col:last-child .buttons-wrapper a:active {
+  opacity: 1;
+  background-color: #440707;
 }
 .section-get-apps .col:last-child .buttons-wrapper a i {
   font-size: 4rem;
   display: block;
+}
+@media screen and (max-width: 767px) {
+  .section-get-apps .col:last-child .buttons-wrapper a i {
+    font-size: 2.5rem;
+  }
+}
+@media screen and (max-width: 991px) {
+  .section-get-apps .col:last-child .buttons-wrapper a .available-in {
+    text-align: center;
+  }
 }
 .section-get-apps .col:last-child .buttons-wrapper a .available-in span {
   text-transform: capitalize;
   display: block;
   margin-bottom: 6px;
 }
+@media screen and (max-width: 767px) {
+  .section-get-apps .col:last-child .buttons-wrapper a .available-in span {
+    font-size: 0.8rem;
+  }
+}
 .section-get-apps .col:last-child .buttons-wrapper a .available-in strong {
   text-transform: uppercase;
   display: block;
+}
+@media screen and (max-width: 767px) {
+  .section-get-apps .col:last-child .buttons-wrapper a .available-in strong {
+    font-size: 0.8rem;
+  }
 }
 
 .section-partners {

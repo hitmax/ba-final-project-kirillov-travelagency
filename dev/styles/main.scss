@@ -782,6 +782,7 @@ header.container {
     .row {
       .col {
         margin-bottom: 2rem;
+
         a {
           display: flex;
           justify-content: space-between;
@@ -833,6 +834,14 @@ header.container {
 .section-get-apps {
   //padding-top: 80px;
   padding-bottom: 0 !important;
+  @media screen and (max-width: 440px) {
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/get-apps-hand-iphone.png") no-repeat bottom ;
+    background-size: contain;
+    padding-bottom: 5rem !important;
+    .row > .col {
+      display: none;
+    }
+  }
 
   img {
     width: 100%;
@@ -848,42 +857,72 @@ header.container {
       text-transform: uppercase;
       font-size: 2rem;
       font-weight: 700;
+      text-align: center;
     }
 
     p {
       text-align: center;
+      margin: 2rem 0;
+      color: #000;
     }
 
     .buttons-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+
       a {
         display: inline-flex;
-        justify-content: space-between;
+        justify-content: space-around;
         align-items: center;
         text-decoration: none;
         color: #fff;
         background-color: $redTemplateColor;
-        width: 200px;
+        width: 45%;
         border-radius: 20px;
-        padding: 10px;
-        margin: 20px;
+        padding: .75rem;
+        //margin: 1rem;
+
+        &:hover {
+          opacity: 0.9;
+          box-shadow: 0 0 1.5rem darken($redTemplateColor, 30%);
+        }
+
+        &:active {
+          opacity: 1;
+          background-color: darken($redTemplateColor, 50%);
+          //box-shadow: 0.2rem solid darken($redTemplateColor, 30%);
+        }
 
         i {
           font-size: 4rem;
           display: block;
+          @media screen and (max-width: 767px) {
+            font-size: 2.5rem;
+          }
         }
 
         .available-in {
+          @media screen and (max-width: 991px) {
+            text-align: center;
+          }
+
           span {
             text-transform: capitalize;
             display: block;
             margin-bottom: 6px;
+            @media screen and (max-width: 767px) {
+              font-size: 0.8rem;
+            }
           }
 
           strong {
             text-transform: uppercase;
             display: block;
+            @media screen and (max-width: 767px) {
+              font-size: 0.8rem;
+            }
           }
-        ;
         }
       }
     }
