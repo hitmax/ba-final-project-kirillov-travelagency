@@ -835,7 +835,7 @@ header.container {
   //padding-top: 80px;
   padding-bottom: 0 !important;
   @media screen and (max-width: 440px) {
-    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/get-apps-hand-iphone.png") no-repeat bottom ;
+    background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/get-apps-hand-iphone.png") no-repeat bottom;
     background-size: contain;
     padding-bottom: 5rem !important;
     .row > .col {
@@ -930,7 +930,7 @@ header.container {
 }
 
 .section-partners {
-  padding: 160px 0 0 0 !important;
+  padding: 10rem 0 0 0 !important;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%), url("../images/bg-beach.jpg") center no-repeat;
 
   .section-head {
@@ -943,34 +943,43 @@ header.container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 160px;
+    margin-bottom: 10rem;
+
+    img {
+      width: 15%;
+    }
   }
 
   .subscribe-email {
     background-color: rgba(255, 255, 255, 0.7);
-    padding: 80px 0;
+    padding: 5rem 0;
 
-    .col:last-child {
-      font-size: 0;
+    .row {
+      margin: 0;
 
-      input {
-        height: 80px;
-        width: 85.2%;
-        vertical-align: top;
-        font-size: 1.25rem;
+      .col:last-child {
+        font-size: 0;
 
-        &[placeholder] {
-          padding-left: 20px;
+        input {
+          height: 5rem;
+          width: 75%;
+          vertical-align: top;
+          font-size: 1.25rem;
+
+          &[placeholder] {
+            padding-left: 1.5rem;
+            font-size: 1rem;
+          }
         }
-      }
 
-      button {
-        height: 80px;
-        width: 14.8%;
-        border: none;
-        font-size: 3rem;
-        color: #fff;
-        background-color: $blueTemplateColor;
+        button {
+          height: 5rem;
+          width: 5rem;
+          border: none;
+          font-size: 3rem;
+          color: #fff;
+          background-color: $blueTemplateColor;
+        }
       }
     }
   }

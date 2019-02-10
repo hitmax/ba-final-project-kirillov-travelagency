@@ -16119,7 +16119,7 @@ header.container .navbar-nav li {
 }
 
 .section-partners {
-  padding: 160px 0 0 0 !important;
+  padding: 10rem 0 0 0 !important;
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.6) 50%, rgba(0, 0, 0, 0.1) 100%), url("../images/bg-beach.jpg") center no-repeat;
 }
 .section-partners .section-head h3 {
@@ -16129,27 +16129,34 @@ header.container .navbar-nav li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 160px;
+  margin-bottom: 10rem;
+}
+.section-partners .logo-wrapper img {
+  width: 15%;
 }
 .section-partners .subscribe-email {
   background-color: rgba(255, 255, 255, 0.7);
-  padding: 80px 0;
+  padding: 5rem 0;
 }
-.section-partners .subscribe-email .col:last-child {
+.section-partners .subscribe-email .row {
+  margin: 0;
+}
+.section-partners .subscribe-email .row .col:last-child {
   font-size: 0;
 }
-.section-partners .subscribe-email .col:last-child input {
-  height: 80px;
-  width: 85.2%;
+.section-partners .subscribe-email .row .col:last-child input {
+  height: 5rem;
+  width: 75%;
   vertical-align: top;
   font-size: 1.25rem;
 }
-.section-partners .subscribe-email .col:last-child input[placeholder] {
-  padding-left: 20px;
+.section-partners .subscribe-email .row .col:last-child input[placeholder] {
+  padding-left: 1.5rem;
+  font-size: 1rem;
 }
-.section-partners .subscribe-email .col:last-child button {
-  height: 80px;
-  width: 14.8%;
+.section-partners .subscribe-email .row .col:last-child button {
+  height: 5rem;
+  width: 5rem;
   border: none;
   font-size: 3rem;
   color: #fff;
