@@ -15990,8 +15990,8 @@ header.container .navbar-nav li {
   background-size: contain;
   background-position: top;
 }
-.section-blog .blog-grid .row {
-  margin-bottom: 40px;
+.section-blog .blog-grid .row .col {
+  margin-bottom: 2rem;
 }
 .section-blog .blog-grid .row .col a {
   display: flex;
@@ -16006,9 +16006,10 @@ header.container .navbar-nav li {
 }
 .section-blog .blog-grid .row .col a img {
   border-radius: 10px;
+  width: 35%;
 }
 .section-blog .blog-grid .row .col a .wrapper-blog-content {
-  padding: 20px;
+  padding: 1rem;
 }
 .section-blog .blog-grid .row .col a .wrapper-blog-content .wrapper-blog-date-time i {
   color: #777777;

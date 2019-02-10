@@ -780,9 +780,8 @@ header.container {
 
   .blog-grid {
     .row {
-      margin-bottom: 40px;
-
       .col {
+        margin-bottom: 2rem;
         a {
           display: flex;
           justify-content: space-between;
@@ -798,10 +797,11 @@ header.container {
 
           img {
             border-radius: 10px;
+            width: 35%;
           }
 
           .wrapper-blog-content {
-            padding: 20px;
+            padding: 1rem;
 
             .wrapper-blog-date-time {
               i {
