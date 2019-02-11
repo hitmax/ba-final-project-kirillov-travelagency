@@ -35,6 +35,7 @@
             infinite: true,
             slidesToShow: 3,
             slidesToScroll: 1,
+            // centerMode: true,
             responsive: [
                 {
                     breakpoint: 1220,
@@ -61,11 +62,12 @@
 
         $('.section-tour-packages-slider').slick({
             // centerMode: true,
-            // centerPadding: '60px',
+            centerPadding: '60px',
             arrows: true,
             fade: false,
             dots: false,
-            autoplay: true,
+            // autoplay: true,
+            autoplay: false,
             autoplaySpeed: 3000,
             pauseOnFocus: false,
             pauseOnHover: true,
