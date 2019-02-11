@@ -15519,19 +15519,20 @@ html .hidden, body .hidden {
 }
 
 header.container {
-  position: relative;
+  position: fixed;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
   z-index: 1;
 }
 header.container .navbar {
   padding: 2rem 1.5rem;
-  position: absolute;
-  top: 0;
   border-radius: 0 0 25px 25px;
   border-right: 2px solid #252525;
   border-bottom: 2px solid #252525;
   border-left: 2px solid #252525;
   width: 100%;
-  background: rgba(255, 255, 255, 0.7);
+  background: rgba(255, 255, 255, 0.9);
 }
 header.container .navbar .navbar-collapse, header.container .navbar .btn {
   font-weight: 900;
@@ -15562,29 +15563,69 @@ header.container .navbar-nav li {
   margin-right: 0.75rem;
 }
 
-.hero-section {
+.hero-section .hero-section-slider > div {
   position: relative;
 }
-.hero-section .hero-section-slider .text-container {
-  display: table;
-  margin-top: 16.66%;
-  margin-left: 18.23%;
+.hero-section .hero-section-slider > div .text-container {
+  display: inline-block;
+  position: absolute;
+  top: 50%;
+  left: 13%;
+  transform: translateY(-50%);
   background-color: rgba(255, 255, 255, 0.7);
   border: 2px solid #252525;
   border-radius: 25px;
   padding: 1.5rem;
 }
-.hero-section .hero-section-slider .text-container strong {
+.hero-section .hero-section-slider > div .text-container strong {
   font-size: 1.5rem;
   text-transform: capitalize;
   margin-bottom: 1rem;
 }
-.hero-section .hero-section-slider .text-container h2 {
+.hero-section .hero-section-slider > div .text-container h2 {
   font-size: 2rem;
   margin: 1rem 0;
 }
-.hero-section .hero-section-slider .text-container h3 {
+.hero-section .hero-section-slider > div .text-container h3 {
   margin: 1rem 0;
+}
+@media screen and (max-width: 969px) {
+  .hero-section .hero-section-slider > div .text-container {
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 1rem;
+  }
+  .hero-section .hero-section-slider > div .text-container strong {
+    font-size: 1rem;
+  }
+  .hero-section .hero-section-slider > div .text-container h2 {
+    font-size: 1.5rem;
+  }
+  .hero-section .hero-section-slider > div .text-container h3 {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .hero-section .hero-section-slider > div .text-container {
+    top: 70%;
+  }
+}
+@media screen and (max-width: 500px) {
+  .hero-section .hero-section-slider > div .text-container {
+    top: initial;
+    bottom: 1rem;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 80%;
+    max-height: 60%;
+    transform: translate(0, 0);
+  }
+}
+@media screen and (max-width: 440px) {
+  .hero-section .hero-section-slider > div .text-container {
+    display: none;
+  }
 }
 .hero-section .hero-section-slider .slider-girl {
   background: url("../images/hero-bg-girl.jpg") no-repeat;
@@ -15607,11 +15648,12 @@ header.container .navbar-nav li {
 .hero-section .hero-section-slider .slider-rocks {
   background: url("../images/hero-bg-rocks.jpg") no-repeat;
 }
+.hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
+  height: 100vh;
+}
 @media screen and (orientation: landscape) {
   .hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
-    height: 100vh;
-    min-height: 700px;
-    width: 100vw;
+    width: 100%;
     background-size: cover;
     background-position: center;
   }
@@ -15619,7 +15661,7 @@ header.container .navbar-nav li {
 @media screen and (orientation: portrait) {
   .hero-section .hero-section-slider .slider-snowboard, .hero-section .hero-section-slider .slider-beach, .hero-section .hero-section-slider .slider-dubai, .hero-section .hero-section-slider .slider-girl, .hero-section .hero-section-slider .slider-great-wall, .hero-section .hero-section-slider .slider-india, .hero-section .hero-section-slider .slider-rocks {
     width: 100%;
-    height: auto;
+    height: 50vw;
     background-size: cover;
   }
 }

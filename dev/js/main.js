@@ -10,7 +10,18 @@
             autoplaySpeed: 5000,
             pauseOnFocus: false,
             pauseOnHover: false,
-            infinite: true
+            infinite: true,
+            responsive: [
+                {
+                    breakpoint: 969,
+                    settings: {
+                        dots: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        // slidesToShow: 3
+                    }
+                }
+            ]
         });
 
         $('.section-convenience-slider').slick({
