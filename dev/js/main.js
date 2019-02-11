@@ -49,8 +49,8 @@
         });
 
         $('.section-tour-packages-slider').slick({
-            centerMode: true,
-            centerPadding: '60px',
+            // centerMode: true,
+            // centerPadding: '60px',
             arrows: true,
             fade: false,
             dots: false,
@@ -63,20 +63,29 @@
             slidesToScroll: 1,
             responsive: [
                 {
-                    breakpoint: 768,
+                    breakpoint: 1020,
                     settings: {
                         arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
+                        // centerMode: true,
+                        // centerPadding: '40px',
                         slidesToShow: 3
+                    }
+                },
+                {
+                    breakpoint: 992,
+                    settings: {
+                        arrows: false,
+                        // centerMode: true,
+                        // centerPadding: '40px',
+                        slidesToShow: 2
                     }
                 },
                 {
                     breakpoint: 480,
                     settings: {
                         arrows: false,
-                        centerMode: true,
-                        centerPadding: '40px',
+                        // centerMode: true,
+                        // centerPadding: '40px',
                         slidesToShow: 1
                     }
                 }

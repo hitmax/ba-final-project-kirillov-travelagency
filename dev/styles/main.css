@@ -15396,7 +15396,7 @@ html {
 }
 @media screen and (max-width: 1280px) {
   .slick-prev {
-    left: -20px;
+    left: -15px;
   }
 }
 .slick-prev:before {
@@ -15408,7 +15408,7 @@ html {
 }
 @media screen and (max-width: 1280px) {
   .slick-next {
-    right: -20px;
+    right: -15px;
   }
 }
 .slick-next:before {
@@ -15808,11 +15808,19 @@ header.container .navbar-nav li {
   }
 }
 .section-tour-packages .section-head {
-  margin: 80px 0;
+  margin: 5rem 0;
 }
 .section-tour-packages .form-custom-package {
   padding: 10px;
   background-color: rgba(255, 255, 255, 0.4);
+}
+@media screen and (max-width: 767px) {
+  .section-tour-packages .form-custom-package div.col {
+    margin-bottom: 1rem;
+  }
+}
+.section-tour-packages .form-custom-package button[type=submit] {
+  width: 100%;
 }
 .section-tour-packages .section-head h3 {
   font-size: 1.5rem;

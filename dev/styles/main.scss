@@ -526,12 +526,20 @@ header.container {
   }
 
   .section-head {
-    margin: 80px 0;
+    margin: 5rem 0;
   }
 
   .form-custom-package {
     padding: 10px;
     background-color: rgba(255, 255, 255, 0.4);
+    div.col {
+      @media screen and (max-width: 767px) {
+        margin-bottom: 1rem;
+      }
+    }
+    button[type=submit] {
+      width: 100%;
+    }
   }
 
   .section-head {
