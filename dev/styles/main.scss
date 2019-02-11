@@ -151,10 +151,11 @@ html, body {
     padding: 0;
   }
 
-  //section:not(.hero-section):not(.section-get-apps) {
   section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
-    //padding: 5rem 0 !important;
     padding: 5rem 0;
+  }
+  .hidden {
+    visibility: hidden;
   }
 }
 
@@ -347,26 +348,17 @@ header.container {
     width: 310px;
   }
 
-  //.travel-card {
-  // @include card;
-  //}
-  //
-  //.random-container {
-  //  .travel-card {
-  //    @include card;
-  //    width: 370px;
-  //  }
-  //}
-
   img {
-    //width: 100%;
-    height: 400px;
+    width: 100%;
+    //height: 400px;
+    height: auto;
     border-bottom: 2px solid $greyTextColor;
   }
 
   .info-block {
     padding: 15px;
-    max-height: 130px;
+    //min-height: 130px;
+    height: auto;
 
 
     h4 {
@@ -528,6 +520,9 @@ header.container {
 
   .travel-card {
     margin: 0 15px;
+    @media screen and (max-width: 440px) {
+      margin: 0 5px;
+    }
   }
 
   .section-head {
@@ -552,7 +547,16 @@ header.container {
   //padding: 80px 0;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/bg-world-map.png") top center no-repeat;
 
+  @media screen and (max-width: 991px) {
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
   .row {
+    @media screen and (max-width: 420px) {
+      margin: 0;
+      padding: 0;
+    }
+
     .col {
       display: flex;
       justify-content: flex-start;
@@ -561,12 +565,29 @@ header.container {
 
       img {
         width: 30%;
+        align-self: flex-end;
+        @media screen and (max-width: 420px) {
+          width: 15%;
+          align-self: center;
+        }
       }
 
       .wrapper-country-info {
         max-width: 60%;
         margin-left: 10%;
-        //text-align: center;
+        @media screen and (min-width: 992px) {
+          margin-left: 0.5rem;
+          max-width: 68%;
+        }
+        @media screen and (max-width: 420px) {
+          max-width: 80%;
+          margin-left: 2%;
+        }
+
+        h3, h4 {
+          text-align: center;
+          color: darken($blueTemplateColor,30%);
+        }
 
         .column {
           column-count: 2;
@@ -1098,7 +1119,7 @@ footer {
 }
 
 
-// ************************** styles for TOUR-ENGLAND page ************************************
+// ************************** styles for TOUR-COUNTRY page ************************************
 .section-accordion-slider {
   font-size: 0;
 
@@ -1223,7 +1244,5 @@ footer {
   font-size: 4rem;
 }
 
-.hidden {
-  visibility: hidden;
-}
+
 

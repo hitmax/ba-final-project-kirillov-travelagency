@@ -15514,6 +15514,9 @@ html .container, html .container-fluid, body .container, body .container-fluid {
 html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
   padding: 5rem 0;
 }
+html .hidden, body .hidden {
+  visibility: hidden;
+}
 
 header.container {
   position: relative;
@@ -15662,12 +15665,13 @@ header.container .navbar-nav li {
   }
 }
 .travel-card img {
-  height: 400px;
+  width: 100%;
+  height: auto;
   border-bottom: 2px solid #777777;
 }
 .travel-card .info-block {
   padding: 15px;
-  max-height: 130px;
+  height: auto;
 }
 .travel-card .info-block h4 {
   display: inline-block;
@@ -15798,6 +15802,11 @@ header.container .navbar-nav li {
 .section-tour-packages .travel-card {
   margin: 0 15px;
 }
+@media screen and (max-width: 440px) {
+  .section-tour-packages .travel-card {
+    margin: 0 5px;
+  }
+}
 .section-tour-packages .section-head {
   margin: 80px 0;
 }
@@ -15813,6 +15822,18 @@ header.container .navbar-nav li {
 .section-best-places {
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/bg-world-map.png") top center no-repeat;
 }
+@media screen and (max-width: 991px) {
+  .section-best-places {
+    background-repeat: repeat-y;
+    background-size: contain;
+  }
+}
+@media screen and (max-width: 420px) {
+  .section-best-places .row {
+    margin: 0;
+    padding: 0;
+  }
+}
 .section-best-places .row .col {
   display: flex;
   justify-content: flex-start;
@@ -15821,10 +15842,33 @@ header.container .navbar-nav li {
 }
 .section-best-places .row .col img {
   width: 30%;
+  align-self: flex-end;
+}
+@media screen and (max-width: 420px) {
+  .section-best-places .row .col img {
+    width: 15%;
+    align-self: center;
+  }
 }
 .section-best-places .row .col .wrapper-country-info {
   max-width: 60%;
   margin-left: 10%;
+}
+@media screen and (min-width: 992px) {
+  .section-best-places .row .col .wrapper-country-info {
+    margin-left: 0.5rem;
+    max-width: 68%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .section-best-places .row .col .wrapper-country-info {
+    max-width: 80%;
+    margin-left: 2%;
+  }
+}
+.section-best-places .row .col .wrapper-country-info h3, .section-best-places .row .col .wrapper-country-info h4 {
+  text-align: center;
+  color: #004766;
 }
 .section-best-places .row .col .wrapper-country-info .column {
   column-count: 2;
@@ -16338,10 +16382,6 @@ footer .container-fluid span {
 
 .section-tour-order-form {
   font-size: 4rem;
-}
-
-.hidden {
-  visibility: hidden;
 }
 
 /*# sourceMappingURL=main.css.map */

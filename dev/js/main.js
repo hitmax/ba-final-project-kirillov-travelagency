@@ -47,6 +47,7 @@
                 }
             ]
         });
+
         $('.section-tour-packages-slider').slick({
             centerMode: true,
             centerPadding: '60px',
