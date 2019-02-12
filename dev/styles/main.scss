@@ -1,5 +1,13 @@
-// ********* z-index ************
-//header   z-index: 1;
+// ********* z-index's ************
+//header  z-index: 5;
+//#plane  z-index: 4;
+//#shadow z-index: 3;
+//#clouds z-index: 2;
+//section-video-tour bg-image z-index: 1;
+//slick-arrows z-index: 10;
+//.button-play-wrapper z-index: 15;
+//help-me block z-index: 20;
+//help-me button z-index: 20;
 
 
 $blueTemplateColor: #00b1ff;
@@ -172,7 +180,7 @@ header.container {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 5;
 
   .navbar {
     //padding: 30px 0;
@@ -731,18 +739,43 @@ header.container {
   background-size: contain;
   background-position: bottom;
   position: relative;
+  overflow: hidden;
   //background-size: cover;
   //height: 1980px;
 
-  img {
+  .bg-image {
     position: relative;
     width: 100%;
     //opacity: 1;
     z-index: -1;
   }
+  #plane, #shadow {
+    position: absolute;
+    width: 25vw;
+    perspective: 800px;
+  }
+  #plane {
+    z-index: 4;
+    top: 11%;
+    left: 58%;
+  }
+  #shadow {
+    z-index: 3;
+    top: 17%;
+    left: 59%;
+  }
+  #clouds-1, #clouds-2 {
+    position: absolute;
+    width: 120vw;
+    perspective: 800px;
+    top: 0;
+    left: 0;
+    z-index: 2;
+  }
 
   a.button-play-wrapper {
     position: absolute;
+    z-index: 15;
     left: 12%;
     top: 66%;
     color: #fff;
@@ -1305,9 +1338,9 @@ footer {
   }
 }
 
-.section-tour-order-form {
-  font-size: 4rem;
-}
+//.section-tour-order-form {
+//  font-size: 4rem;
+//}
 
 // ******** BACK TO TOP ARROW STYLES **************
 
@@ -1363,10 +1396,7 @@ footer {
 
 #help-me-block {
   position: fixed;
-  //display: flex;
-  //flex-direction: column;
-  //justify-content: space-between;
-  //align-items: center;
+  z-index: 20;
   top: 50%;
   right: 0;
   max-width: 20vw;
@@ -1406,14 +1436,13 @@ footer {
       text-align: center;
     }
   }
-
-
 }
 
 // *********** styles for HELP ME button ***************
 
 #help-me-button {
 position: fixed;
+  z-index: 20;
   top: 50%;
   right: 0;
   transform: translate(-35%,-50%);
@@ -1473,7 +1502,7 @@ position: fixed;
     .phone {
       font-size: 3rem;
       line-height: 5rem;
-      animation: phone .9s ease-in-out infinite;
+      animation: phone 2s ease-in-out infinite;
 
       i {
         transition: .5s ease-in-out;

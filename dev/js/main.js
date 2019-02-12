@@ -1,14 +1,16 @@
 ;(function ($) {
     $(function () {
-        // ********** hide/show textContainer in hero-section when burger-button clicked ***************
+
+        // ***** hide/show textContainer in hero-section when burger-button clicked ***
         const $textContainer = $('.text-container');
 
         $('.navbar-toggler').click(() => {
             $textContainer.toggleClass('hidden');
         });
-        // *********************************************************************************************
+        // ****************************************************************************
 
-        // **************************  slick-sliders initialized **********************************
+
+        // **************************  slick-sliders initialized **********************
         $('.hero-section-slider').slick({
             arrows: false,
             fade: true,
@@ -111,20 +113,22 @@
                 }
             ]
         });
-        // *********************************************************************************************
+        // ****************************************************************************
 
 
-        // ******************************** hide/show back-to-top-button ********************************
-        const backToTopButton = $('#back-to-top-button'),
+        // ******************************** hide/show back-to-top-button **************
+        let backToTopButton = $('#back-to-top-button'),
             firstSection = $('.hero-section'),              //cant make search of 2 first section
-            secondSection = $('.section-feature-trip');
+            secondSection = $('.section-feature-trip'),
+            $window = $(window);
+
 
         // console.log(firstSection.height());
         // console.log(secondSection.height());
 
         backToTopButton.hide();
 
-        $(window).scroll(function () {
+        $window.scroll(function () {
             let firstTwoSectionHeight = firstSection.height() + secondSection.height(),
                 headerNavBar = $('.navbar');
 
@@ -151,13 +155,13 @@
         });
         // });
         //
-        // *********************************************************************************************
+        // *************************************************************************
 
-        // *********************************************************************************************
-        const   helpMeButton = $('#help-me-button'),
-                helpMeBlock = $('#help-me-block'),
-                closeHelpBlock = $('#close-block'),
-                callMeButton = $('#call-me');
+        // ********************* HELP ME BUTTON AND BLOCK **************************
+        const helpMeButton = $('#help-me-button'),
+            helpMeBlock = $('#help-me-block'),
+            closeHelpBlock = $('#close-block'),
+            callMeButton = $('#call-me');
         helpMeBlock.hide();
         helpMeButton.on('click', function () {
             helpMeButton.fadeOut();
@@ -166,11 +170,58 @@
         closeHelpBlock.on('click', function () {
             helpMeButton.fadeIn();
             helpMeBlock.fadeOut();
-        })
+        });
         callMeButton.on('click', function () {
             helpMeButton.fadeOut();
             helpMeBlock.fadeOut();
-        })
+        });
+        // **************************************************************************
+
+        // ********************* PARALLAX EFFECT FOR PLANE AND SHADOW ***************
+
+
+        let plane = $('#plane'),
+            shadow = $('#shadow'),
+            clouds1 = $('#clouds-1'),
+            clouds2 = $('#clouds-2'),
+            planeTop = plane.position().top,
+            planeLeft = plane.position().left,
+            shadowTop = shadow.position().top,
+            shadowLeft = shadow.position().left,
+            clouds1Top = clouds1.position().top,
+            clouds1Left = clouds1.position().left,
+            clouds2Top = clouds2.position().top,
+            clouds2Left = clouds2.position().left;
+
+
+        $window.on('mousemove', function (e) {
+            console.log('x' + e.clientX);
+            console.log('y' + e.clientY);
+            console.log('top' + shadow.position().top);
+            console.log('left' + shadow.position().left);
+            plane.css({
+                left: planeLeft - e.clientX / 3 + 150,
+                top: planeTop - e.clientY / 12,
+                transform: 'rotate3d(-1, 1, 0' + e.clientY / 40 + ' , ' + -(e.clientY / 30) + 'deg)',
+
+            });
+            shadow.css({
+                left: shadowLeft - e.clientX / 4 + 150,
+                top: shadowTop - e.clientY / 20,
+                transform: 'rotate3d(-1, 1, 0' + e.clientY / 40 + ' , ' + -(e.clientY / 30) + 'deg)'
+            });
+            clouds1.css({
+                left: clouds1Left + e.clientX / 100,
+                top: clouds1Top - e.clientY / 80 - 200 + 'px'
+            });
+            clouds2.css({
+                left: clouds2Left - e.clientX / 20,
+                top: clouds2Top + e.clientY / 40 - 150 + 'px'
+            });
+
+        });
+
+        // **************************************************************************
 
 
     });

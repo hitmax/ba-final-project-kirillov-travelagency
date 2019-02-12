@@ -15526,7 +15526,7 @@ header.container {
   left: 0;
   right: 0;
   margin: 0 auto;
-  z-index: 1;
+  z-index: 5;
 }
 header.container .navbar {
   padding: 2rem 1.5rem;
@@ -15998,14 +15998,39 @@ header.container .navbar-nav li {
   background-size: contain;
   background-position: bottom;
   position: relative;
+  overflow: hidden;
 }
-.section-video-tour img {
+.section-video-tour .bg-image {
   position: relative;
   width: 100%;
   z-index: -1;
 }
+.section-video-tour #plane, .section-video-tour #shadow {
+  position: absolute;
+  width: 25vw;
+  perspective: 800px;
+}
+.section-video-tour #plane {
+  z-index: 4;
+  top: 11%;
+  left: 58%;
+}
+.section-video-tour #shadow {
+  z-index: 3;
+  top: 17%;
+  left: 59%;
+}
+.section-video-tour #clouds-1, .section-video-tour #clouds-2 {
+  position: absolute;
+  width: 120vw;
+  perspective: 800px;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
 .section-video-tour a.button-play-wrapper {
   position: absolute;
+  z-index: 15;
   left: 12%;
   top: 66%;
   color: #fff;
@@ -16443,10 +16468,6 @@ footer .container-fluid span {
   color: #00b1ff;
 }
 
-.section-tour-order-form {
-  font-size: 4rem;
-}
-
 #back-to-top-button {
   position: fixed;
   bottom: 1rem;
@@ -16489,6 +16510,7 @@ footer .container-fluid span {
 
 #help-me-block {
   position: fixed;
+  z-index: 20;
   top: 50%;
   right: 0;
   max-width: 20vw;
@@ -16531,6 +16553,7 @@ footer .container-fluid span {
 
 #help-me-button {
   position: fixed;
+  z-index: 20;
   top: 50%;
   right: 0;
   transform: translate(-35%, -50%);
@@ -16583,7 +16606,7 @@ footer .container-fluid span {
 #help-me-button .help-me-button .phone {
   font-size: 3rem;
   line-height: 5rem;
-  animation: phone 0.9s ease-in-out infinite;
+  animation: phone 2s ease-in-out infinite;
 }
 #help-me-button .help-me-button .phone i {
   transition: 0.5s ease-in-out;
