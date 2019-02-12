@@ -159,7 +159,7 @@ html, body {
     padding: 0;
   }
 
-  section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider) {
+  section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider):not(.section-gmap) {
     padding: 5rem 0;
   }
 
@@ -749,21 +749,25 @@ header.container {
     //opacity: 1;
     z-index: -1;
   }
+
   #plane, #shadow {
     position: absolute;
     width: 25vw;
     perspective: 800px;
   }
+
   #plane {
     z-index: 4;
     top: 11%;
     left: 58%;
   }
+
   #shadow {
     z-index: 3;
     top: 17%;
     left: 59%;
   }
+
   #clouds-1, #clouds-2 {
     position: absolute;
     width: 120vw;
@@ -1105,37 +1109,54 @@ header.container {
   }
 }
 
+.section-gmap {
+  min-height: 42rem;
+
+  .info-map {
+
+  }
+}
+
 .section-feedback-form {
-  //padding: 80px 0;
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/bg-footer.jpg") repeat;
 
-  form {
-    .col {
-      padding: 0 20px;
+  .container {
+    position: relative;
+    padding: 3rem 0;
+    margin-top: -18rem;
+    background-color: #fff;
+    border: 3px solid $greyTextColor;
+    border-radius: 1rem;
 
-      .form-inline {
-        justify-content: space-between;
-      }
+    form {
+      .col {
+        padding: 0 20px;
 
-      & > * {
-        margin-bottom: 10px;
-      }
-
-      .form-check {
-        width: 70%;
-
-        .form-check-input {
-          position: relative;
-          margin: 0;
+        .form-inline {
+          justify-content: space-between;
         }
-      }
 
-      input[type='submit'] {
-        width: 30%;
-      }
+        & > * {
+          margin-bottom: 10px;
+        }
 
-      textarea {
-        resize: none;
-        height: 80%;
+        .form-check {
+          width: 70%;
+
+          .form-check-input {
+            position: relative;
+            margin: 0;
+          }
+        }
+
+        input[type='submit'] {
+          width: 30%;
+        }
+
+        textarea {
+          resize: none;
+          height: 80%;
+        }
       }
     }
   }
@@ -1442,11 +1463,12 @@ footer {
 // *********** styles for HELP ME button ***************
 
 #help-me-button {
-position: fixed;
+  position: fixed;
   z-index: 20;
   top: 50%;
   right: 0;
-  transform: translate(-35%,-50%);
+  transform: translate(-35%, -50%);
+
   .help-me-button, .circle, .phone {
     position: absolute;
     width: 5rem;
@@ -1544,6 +1566,8 @@ position: fixed;
     }
   }
 }
+
+
 
 
 

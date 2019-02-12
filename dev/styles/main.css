@@ -15511,7 +15511,7 @@ html .section-head, body .section-head {
 html .container, html .container-fluid, body .container, body .container-fluid {
   padding: 0;
 }
-html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider) {
+html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider):not(.section-gmap), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider):not(.section-gmap) {
   padding: 5rem 0;
 }
 html .hidden, body .hidden {
@@ -16296,26 +16296,40 @@ header.container .navbar-nav li {
   background-color: #00b1ff;
 }
 
-.section-feedback-form form .col {
+.section-gmap {
+  min-height: 42rem;
+}
+.section-feedback-form {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/bg-footer.jpg") repeat;
+}
+.section-feedback-form .container {
+  position: relative;
+  padding: 3rem 0;
+  margin-top: -18rem;
+  background-color: #fff;
+  border: 3px solid #777777;
+  border-radius: 1rem;
+}
+.section-feedback-form .container form .col {
   padding: 0 20px;
 }
-.section-feedback-form form .col .form-inline {
+.section-feedback-form .container form .col .form-inline {
   justify-content: space-between;
 }
-.section-feedback-form form .col > * {
+.section-feedback-form .container form .col > * {
   margin-bottom: 10px;
 }
-.section-feedback-form form .col .form-check {
+.section-feedback-form .container form .col .form-check {
   width: 70%;
 }
-.section-feedback-form form .col .form-check .form-check-input {
+.section-feedback-form .container form .col .form-check .form-check-input {
   position: relative;
   margin: 0;
 }
-.section-feedback-form form .col input[type=submit] {
+.section-feedback-form .container form .col input[type=submit] {
   width: 30%;
 }
-.section-feedback-form form .col textarea {
+.section-feedback-form .container form .col textarea {
   resize: none;
   height: 80%;
 }
