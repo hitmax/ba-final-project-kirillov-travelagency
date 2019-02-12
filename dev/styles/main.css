@@ -16446,4 +16446,44 @@ footer .container-fluid span {
   font-size: 4rem;
 }
 
+#back-to-top-button {
+  position: fixed;
+  bottom: 1rem;
+  right: 2rem;
+  padding: 15px;
+}
+#back-to-top-button span {
+  display: block;
+  width: 25px;
+  height: 25px;
+  border-bottom: 5px solid #00b1ff;
+  border-right: 5px solid #00b1ff;
+  transform: rotate(-135deg);
+  margin: -10px;
+  animation: animate 3s infinite;
+}
+#back-to-top-button:hover span {
+  animation-duration: 1s;
+  border-color: #004766;
+}
+#back-to-top-button span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+#back-to-top-button span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(-135deg) translate(-5px, -5px);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: rotate(-135deg) translate(5px, 5px);
+  }
+}
+
 /*# sourceMappingURL=main.css.map */

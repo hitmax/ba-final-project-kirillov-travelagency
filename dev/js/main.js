@@ -1,7 +1,14 @@
 ;(function ($) {
     $(function () {
+        // hide/show textContainer in hero-section when burger-button clicked
         const $textContainer = $('.text-container');
 
+        $('.navbar-toggler').click(() => {
+            $textContainer.toggleClass('hidden');
+        });
+        //
+
+        // slick-sliders initialized
         $('.hero-section-slider').slick({
             arrows: false,
             fade: true,
@@ -104,9 +111,35 @@
                 }
             ]
         });
+        //
 
-        $('.navbar-toggler').click(() => {
-            $textContainer.toggleClass('hidden');
-        });
+        // hide/show back-to-top-button
+        const   backToTopButton = $('#back-to-top-button'),
+                firstSection = $('.hero-section'),              //cant make search of 2 first section
+                secondSection = $('.section-feature-trip');
+
+        console.log(firstSection.height());
+        console.log(secondSection.height());
+
+        backToTopButton.hide();
+
+        $(window).scroll(function () {
+            let firstTwoSectionHeight = firstSection.height() + secondSection.height();
+
+            if ($(this).scrollTop() > firstTwoSectionHeight) {
+                backToTopButton.fadeIn();
+            } else {
+                backToTopButton.fadeOut();
+            }});
+
+            backToTopButton.on('click', function () {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 1000);
+                // return false;                                          // !IMPORTANT for what?!?!
+            });
+        // });
+        //
+
     });
 })(jQuery);
