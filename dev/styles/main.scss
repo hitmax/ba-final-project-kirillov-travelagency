@@ -159,7 +159,7 @@ html, body {
     padding: 0;
   }
 
-  section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
+  section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider) {
     padding: 5rem 0;
   }
 
@@ -991,6 +991,7 @@ header.container {
       justify-content: space-between;
 
       a {
+        transition: all 0.5s;
         display: inline-flex;
         justify-content: space-around;
         align-items: center;

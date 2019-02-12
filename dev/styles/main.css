@@ -15511,7 +15511,7 @@ html .section-head, body .section-head {
 html .container, html .container-fluid, body .container, body .container-fluid {
   padding: 0;
 }
-html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback) {
+html section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider), body section:not(.hero-section):not(.section-video-tour):not(.section-clients-feedback):not(.section-accordion-slider) {
   padding: 5rem 0;
 }
 html .hidden, body .hidden {
@@ -16198,6 +16198,7 @@ header.container .navbar-nav li {
   justify-content: space-between;
 }
 .section-get-apps .col:last-child .buttons-wrapper a {
+  transition: all 0.5s;
   display: inline-flex;
   justify-content: space-around;
   align-items: center;
