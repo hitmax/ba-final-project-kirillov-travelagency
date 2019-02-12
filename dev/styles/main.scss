@@ -166,10 +166,6 @@ html, body {
 }
 
 
-header {
-
-}
-
 header.container {
   //position: relative;
   position: fixed;
@@ -190,6 +186,7 @@ header.container {
     //z-index: 10;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
+    transition: all 1s ease-in;
 
     .navbar-collapse, .btn {
       font-weight: 900;
@@ -1361,4 +1358,163 @@ footer {
     }
   }
 }
+
+// *********** styles for HELP ME window ***************
+
+#help-me-block {
+  position: fixed;
+  //display: flex;
+  //flex-direction: column;
+  //justify-content: space-between;
+  //align-items: center;
+  top: 50%;
+  right: 0;
+  max-width: 20vw;
+  height: auto;
+  text-align: center;
+  padding: 2rem 0.5rem;
+  background-color: lighten($blueTemplateColor, 50%);
+  border: 3px solid $redTemplateColor;
+  border-right: none;
+  border-radius: 25px 0 0 25px;
+  transform: translateY(-50%);
+  @media screen and (max-width: 991px) {
+    max-width: 50vw;
+  }
+  @media screen and (max-width: 991px) {
+    max-width: 50vw;
+  }
+
+  input[type=tel] {
+    display: block;
+    width: 100%;
+    margin: 0 auto 1rem;
+    outline: none;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border: 1px solid $blueTemplateColor;
+    color: $redTemplateColor;
+
+    &:focus {
+      &::placeholder {
+        visibility: hidden;
+      }
+    }
+
+    &::placeholder {
+      color: $redTemplateColor;
+      text-align: center;
+    }
+  }
+
+
+}
+
+// *********** styles for HELP ME button ***************
+
+#help-me-button {
+position: fixed;
+  top: 50%;
+  right: 0;
+  transform: translate(-35%,-50%);
+  .help-me-button, .circle, .phone {
+    position: absolute;
+    width: 5rem;
+    height: 5rem;
+    color: #fff;
+    text-align: center;
+    border-radius: 50%;
+  }
+
+  .help-me-button {
+    background: $blueTemplateColor;
+    position: relative;
+    transition: .5s;
+
+    &:hover {
+      background: darken($blueTemplateColor, 30%);
+    }
+
+    &:hover i {
+      transition: .5s ease-in-out;
+      transform: scale(0);
+    }
+
+    &:hover .text {
+      transform: scaleX(1);
+      transition: .5s ease-in-out;
+      opacity: 1;
+    }
+
+    &:hover::before,
+    &:hover::after {
+      content: '';
+      position: absolute;
+      border: 1px solid #29AEE3;
+      left: -1rem;
+      right: -1rem;
+      top: -1rem;
+      bottom: -1rem;
+      border-radius: 50%;
+      animation: pulse 1.8s linear infinite;
+      opacity: 0;
+    }
+
+    &:hover::after {
+      animation-delay: .5s;
+    }
+
+    .circle {
+      cursor: pointer;
+      z-index: 1;
+      overflow: hidden;
+    }
+
+    .phone {
+      font-size: 3rem;
+      line-height: 5rem;
+      animation: phone .9s ease-in-out infinite;
+
+      i {
+        transition: .5s ease-in-out;
+      }
+    }
+
+    .text {
+      position: absolute;
+      opacity: 0;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 1.5rem 0;
+      font-size: 1rem;
+      transform: scaleX(-1);
+      transition: .5s ease-in-out;
+    }
+
+    @keyframes phone {
+      0%, 100% {
+        transform: rotate(-20deg);
+      }
+      50% {
+        transform: rotate(21deg);
+      }
+    }
+    @keyframes pulse {
+      0% {
+        transform: scale(0.5);
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1.2);
+        opacity: 0;
+      }
+    }
+  }
+}
+
+
+
 

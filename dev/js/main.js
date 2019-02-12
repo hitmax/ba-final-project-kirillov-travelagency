@@ -1,14 +1,14 @@
 ;(function ($) {
     $(function () {
-        // hide/show textContainer in hero-section when burger-button clicked
+        // ********** hide/show textContainer in hero-section when burger-button clicked ***************
         const $textContainer = $('.text-container');
 
         $('.navbar-toggler').click(() => {
             $textContainer.toggleClass('hidden');
         });
-        //
+        // *********************************************************************************************
 
-        // slick-sliders initialized
+        // **************************  slick-sliders initialized **********************************
         $('.hero-section-slider').slick({
             arrows: false,
             fade: true,
@@ -111,35 +111,67 @@
                 }
             ]
         });
-        //
+        // *********************************************************************************************
 
-        // hide/show back-to-top-button
-        const   backToTopButton = $('#back-to-top-button'),
-                firstSection = $('.hero-section'),              //cant make search of 2 first section
-                secondSection = $('.section-feature-trip');
 
-        console.log(firstSection.height());
-        console.log(secondSection.height());
+        // ******************************** hide/show back-to-top-button ********************************
+        const backToTopButton = $('#back-to-top-button'),
+            firstSection = $('.hero-section'),              //cant make search of 2 first section
+            secondSection = $('.section-feature-trip');
+
+        // console.log(firstSection.height());
+        // console.log(secondSection.height());
 
         backToTopButton.hide();
 
         $(window).scroll(function () {
-            let firstTwoSectionHeight = firstSection.height() + secondSection.height();
+            let firstTwoSectionHeight = firstSection.height() + secondSection.height(),
+                headerNavBar = $('.navbar');
 
             if ($(this).scrollTop() > firstTwoSectionHeight) {
                 backToTopButton.fadeIn();
             } else {
                 backToTopButton.fadeOut();
-            }});
+            }
 
-            backToTopButton.on('click', function () {
-                $('body,html').animate({
-                    scrollTop: 0
-                }, 1000);
-                // return false;                                          // !IMPORTANT for what?!?!
-            });
+            //
+            if ($(this).scrollTop() > 10) {
+                headerNavBar.css('padding', '0.5rem 1.5rem');
+            } else {
+                headerNavBar.css('padding', '2rem 1.5rem');
+            }
+        });
+
+
+        backToTopButton.on('click', function () {
+            $('body,html').animate({
+                scrollTop: 0
+            }, 1000);
+            // return false;                                          // !IMPORTANT for what?!?!
+        });
         // });
         //
+        // *********************************************************************************************
+
+        // *********************************************************************************************
+        const   helpMeButton = $('#help-me-button'),
+                helpMeBlock = $('#help-me-block'),
+                closeHelpBlock = $('#close-block'),
+                callMeButton = $('#call-me');
+        helpMeBlock.hide();
+        helpMeButton.on('click', function () {
+            helpMeButton.fadeOut();
+            helpMeBlock.fadeIn();
+        });
+        closeHelpBlock.on('click', function () {
+            helpMeButton.fadeIn();
+            helpMeBlock.fadeOut();
+        })
+        callMeButton.on('click', function () {
+            helpMeButton.fadeOut();
+            helpMeBlock.fadeOut();
+        })
+
 
     });
 })(jQuery);
