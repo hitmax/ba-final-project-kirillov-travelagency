@@ -195,7 +195,9 @@ header.container {
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     transition: all 1s ease-in;
-
+    a {
+      cursor: pointer;
+    }
     .navbar-collapse, .btn {
       font-weight: 900;
     }

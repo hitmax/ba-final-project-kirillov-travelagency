@@ -15538,6 +15538,9 @@ header.container .navbar {
   background: rgba(255, 255, 255, 0.9);
   transition: all 1s ease-in;
 }
+header.container .navbar a {
+  cursor: pointer;
+}
 header.container .navbar .navbar-collapse, header.container .navbar .btn {
   font-weight: 900;
 }
