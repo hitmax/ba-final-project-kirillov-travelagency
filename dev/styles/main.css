@@ -16676,4 +16676,15 @@ footer .container-fluid span {
   color: #00b1ff;
 }
 
+.section-tour-order-form input[type=number]::-webkit-inner-spin-button,
+.section-tour-order-form input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+.section-tour-order-form input[type=number] {
+  -moz-appearance: textfield;
+}
+
 /*# sourceMappingURL=main.css.map */

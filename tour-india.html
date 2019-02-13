@@ -283,13 +283,45 @@
     </section>
     <section class="section-tour-order-form container">
         <h3>tour order form must be there!</h3>
-        <!--<form action="javascript:void(0);">-->
-        <!--<label for="peoples-quantity">Enter quantity of adults</label>-->
-        <!--<input type="number" min="1" max="20" required id="peoples-quantity">-->
-        <!--<label for="kids-quantity">Enter quantity of kids</label>-->
-        <!--<input type="number" min="1" max="20" required id="kids-quantity">-->
-        <!---->
-        <!--</form>-->
+        <form action="javascript:void(0);">
+            <div>
+                <label for="adults-quantity">Enter quantity of adults</label>
+                <button class="quantity-arrow-minus btn btn-outline-danger"> - </button>
+                <input class="quantity-num" type="number" min="1" max="20" value="1" required id="adults-quantity">
+                <button class="quantity-arrow-plus btn btn-outline-success"> + </button>
+            </div>
+            <div>
+                <label for="kids-quantity">Enter quantity of kids</label>
+                <button class="quantity-arrow-minus btn btn-outline-danger"> - </button>
+                <input class="quantity-num" type="number" min="0" max="20" value="0" required id="kids-quantity">
+                <button class="quantity-arrow-plus btn btn-outline-success"> + </button>
+            </div>
+
+            <div>
+                <input type="radio" name="hotel-stars" id="3star" value="3" checked>
+                <label class="form-check-label" for="3star">
+                    Three star hotel
+                </label>
+                <input type="radio" name="hotel-stars" id="4star" value="4">
+                <label class="form-check-label" for="4star">
+                    Four star hotel
+                </label>
+                <input type="radio" name="hotel-stars" id="5star" value="5">
+                <label class="form-check-label" for="5star">
+                    Five star hotel
+                </label>
+            </div>
+            <div>
+                <label for="amount-of-days">Enter amount of days</label>
+                <button class="quantity-arrow-minus btn btn-outline-danger"> - </button>
+                <input class="quantity-num" type="number" min="1" max="30" value="1" required id="amount-of-days">
+                <button class="quantity-arrow-plus btn btn-outline-success"> + </button>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-danger" id="calculate-it" >Calculate price</button>
+            </div>
+            <input type="text" id="total-price">
+        </form>
     </section>
     <footer>
         <div class="container">
@@ -422,7 +454,8 @@
         <div class="text">Need help?</div>
     </div>
 </div>
-<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog" aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
