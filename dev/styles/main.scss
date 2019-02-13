@@ -22,23 +22,6 @@ $goldenTextColor: #ffc811;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,700|Poppins:400,500,600|Raleway:400,600,700');
 @import url('https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic');
 
-//font-family: 'Montserrat', sans-serif;
-//font-family: 'Open Sans', sans-serif;
-//font-family: 'Poppins', sans-serif;
-//font-family: 'Raleway', sans-serif;
-//font-family: 'Marck Script', cursive;
-
-//@mixin card {
-//  //width: 31.62%;
-//  width: 100%;
-//  margin: 5px;
-//  border: 1px solid $greyTextColor;
-//  border-radius: 8px;
-//  overflow: hidden;
-//  background-color: rgba(255, 255, 255, 0.8);
-//}
-
-
 // svg rules
 .cls-1 {
   fill: $blueTemplateColor
@@ -51,12 +34,6 @@ $goldenTextColor: #ffc811;
 .cls-3 {
   fill: #fff;
 }
-
-//
-
-//* {
-//  transition: all 0.5s;
-//}
 
 html, body {
   font: 16px/1 'Montserrat', sans-serif;
@@ -74,7 +51,6 @@ html, body {
     font: 1.75rem 'Marck Script', cursive;
     color: $redTemplateColor;
     text-transform: capitalize;
-    //margin: 6px 0;
     margin: 0.5rem 0;
   }
 
@@ -82,11 +58,7 @@ html, body {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    //margin: 10px 0;
     margin: 0.75rem 0;
-    //@media screen and (max-width: 991px) {
-    //  font-size: 16px;
-    //}
   }
 
   h4 {
@@ -97,14 +69,8 @@ html, body {
   p {
     color: $greyTextColor;
     line-height: 1.75rem;
-    //margin: 16px 0;
     margin: 1rem 0;
   }
-
-  //.wrapper-1170 {
-  //  width: 1170px;
-  //  margin: 0 auto;
-  //}
 
   .logo {
     &:hover {
@@ -119,11 +85,9 @@ html, body {
     }
 
     .logo-text {
-      //margin-left: 10px;
       margin-left: 0.75rem;
       color: #000;
       text-align: center;
-
 
       h1 {
         font-size: 1rem;
@@ -139,18 +103,14 @@ html, body {
 
   .section-head {
     text-align: center;
-    //margin-bottom: 60px;
     margin-bottom: 4rem;
     @media screen and (max-width: 991.98px) {
-      //margin-bottom: 32px;
       margin-bottom: 2rem;
     }
     @media screen and (max-width: 767.98px) {
-      //margin-bottom: 24px;
       margin-bottom: 1.5rem;
     }
     @media screen and (max-width: 575.98px) {
-      //margin-bottom: 16px;
       margin-bottom: 1rem;
     }
   }
@@ -172,9 +132,7 @@ html, body {
   }
 }
 
-
 header.container {
-  //position: relative;
   position: fixed;
   left: 0;
   right: 0;
@@ -182,21 +140,19 @@ header.container {
   z-index: 5;
 
   .navbar {
-    //padding: 30px 0;
     padding: 2rem 1.5rem;
-    //position: absolute;
-    //top: 0;
     border-radius: 0 0 25px 25px;
     border-right: 2px solid #252525;
     border-bottom: 2px solid #252525;
     border-left: 2px solid #252525;
-    //z-index: 10;
     width: 100%;
     background: rgba(255, 255, 255, 0.9);
     transition: all 1s ease-in;
+
     a {
       cursor: pointer;
     }
+
     .navbar-collapse, .btn {
       font-weight: 900;
     }
@@ -238,9 +194,6 @@ header.container {
 }
 
 .hero-section {
-  //position: relative;
-  //z-index: 10;
-
   .hero-section-slider {
     & > div {
       position: relative;
@@ -270,7 +223,6 @@ header.container {
         h3 {
           margin: 1rem 0;
         }
-
 
         @media screen and (max-width: 969px) {
           left: 50%;
@@ -337,7 +289,6 @@ header.container {
       height: 100vh;
 
       @media screen and (orientation: landscape) {
-        //height: 100vh;
         width: 100%;
         background-size: cover;
         background-position: center;
@@ -349,13 +300,9 @@ header.container {
       }
     }
   }
-
-
 }
 
-
 .section-feature-trip {
-  //padding: 80px 0;
   position: relative;
 
   .travel-cards-container {
@@ -373,11 +320,8 @@ header.container {
       text-align: left;
     }
     .travel-cards-container {
-      //margin: -460px 0 0 300px;
-      //position: absolute;
       top: -540px;
       left: 300px;
-      //z-index: 20;
     }
   }
 
@@ -388,7 +332,6 @@ header.container {
 }
 
 .travel-card {
-  //width: 31.62%;
   width: 370px;
   margin: 5px;
   border: 1px solid $greyTextColor;
@@ -401,16 +344,13 @@ header.container {
 
   img {
     width: 100%;
-    //height: 400px;
     height: auto;
     border-bottom: 2px solid $greyTextColor;
   }
 
   .info-block {
     padding: 15px;
-    //min-height: 130px;
     height: auto;
-
 
     h4 {
       display: inline-block;
@@ -433,9 +373,6 @@ header.container {
     p {
       line-height: 1.5rem;
       margin: 0;
-      //overflow: hidden;
-      //text-overflow: ellipsis;
-      //white-space: nowrap
     }
   }
 
@@ -481,14 +418,11 @@ header.container {
   }
 }
 
-
 .section-convenience {
   background: $greyTextColor url("../images/girl-on-the-beach.jpg") center no-repeat;
   background-size: cover;
-  //background: linear-gradient(to bottom, rgba(255,255,255,0.2) 0%,rgba(255,255,255,1) 50%,rgba(255,255,255,0.2) 100%), url("../images/girl-on-the-beach.jpg") center no-repeat;
 
   .container {
-    //padding: 80px 0;
     opacity: 1;
 
     h2, h3 {
@@ -509,7 +443,6 @@ header.container {
         border: 1px solid $greyTextColor;
         border-radius: 10px;
         overflow: hidden;
-        //background-color: rgba(239,91,91,0.6) ;
         background-color: rgba(255, 255, 255, 0.75);
         @media screen and (max-width: 575px) {
           height: 300px;
@@ -533,8 +466,6 @@ header.container {
 }
 
 .section-why-choose-us {
-  //padding: 80px 0;
-
   .accordion {
     padding: 0 14%;
 
@@ -544,7 +475,6 @@ header.container {
       }
 
       .btn {
-        //margin-left: 2.5rem;
         font-weight: 600;
         color: $blueTemplateColor;
         width: 100%;
@@ -568,7 +498,6 @@ header.container {
 
 .section-tour-packages {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../images/tour-package.jpg") top center no-repeat;
-  //padding: 80px 0;
 
   .travel-card {
     margin: 0 15px;
@@ -615,9 +544,7 @@ header.container {
   }
 }
 
-// EMPTY SECTION!!! WAIT FOR PARALLAX EFFECT LESSONS!!!
 .section-best-places {
-  //padding: 80px 0;
   background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/bg-world-map.png") top center no-repeat;
 
   @media screen and (max-width: 991px) {
@@ -687,10 +614,7 @@ header.container {
   }
 }
 
-// ****************************************************
-
 .section-awards {
-  //padding: 80px 0;
   background-color: $redTemplateColor;
 
   .row {
@@ -734,20 +658,15 @@ header.container {
   }
 }
 
-// *************** SECTION NEED REPAIR!!! *******************
 .section-video-tour {
-  background: url("../images/bg-plane-top.png") no-repeat;
+  background: url("../images/bg-plane-top.png") no-repeat bottom;
   background-size: contain;
-  background-position: bottom;
   position: relative;
   overflow: hidden;
-  //background-size: cover;
-  //height: 1980px;
 
   .bg-image {
     position: relative;
     width: 100%;
-    //opacity: 1;
     z-index: -1;
   }
 
@@ -800,8 +719,6 @@ header.container {
   }
 }
 
-// ****************************************************
-
 .section-clients-feedback {
   margin: -2px 0;
   padding: 10px 0 !important;
@@ -809,9 +726,6 @@ header.container {
   background: -moz-linear-gradient(top, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
   background: -webkit-linear-gradient(top, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
   background: linear-gradient(to bottom, #47C7FE 1%, rgba(31, 186, 255, 1) 100%);
-  //min-height: 750px;
-  //margin-top: -50%;
-  //padding: 80px 0;
 
   .section-head {
     h2 {
@@ -840,8 +754,6 @@ header.container {
         }
 
         img {
-          //width: 90px;
-          //width: 7.9%;
           width: 80%;
           opacity: 0.7;
           border-radius: 20px;
@@ -853,8 +765,6 @@ header.container {
 
         .active {
           img {
-            //width: 120px;
-            //width: 10.5%;
             width: 100%;
             opacity: 1;
           }
@@ -897,10 +807,8 @@ header.container {
 }
 
 .section-blog {
-  //padding: 80px 0;
-  background: url(../images/bg-plane-bottom.png) no-repeat;
+  background: url(../images/bg-plane-bottom.png) no-repeat top;
   background-size: contain;
-  background-position: top;
 
   .blog-grid {
     .row {
@@ -956,7 +864,6 @@ header.container {
 }
 
 .section-get-apps {
-  //padding-top: 80px;
   padding-bottom: 0 !important;
   @media screen and (max-width: 440px) {
     background: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/get-apps-hand-iphone.png") no-repeat bottom;
@@ -1006,7 +913,6 @@ header.container {
         width: 45%;
         border-radius: 20px;
         padding: .75rem;
-        //margin: 1rem;
 
         &:hover {
           opacity: 0.9;
@@ -1016,7 +922,6 @@ header.container {
         &:active {
           opacity: 1;
           background-color: darken($redTemplateColor, 50%);
-          //box-shadow: 0.2rem solid darken($redTemplateColor, 30%);
         }
 
         i {
@@ -1105,8 +1010,9 @@ header.container {
           color: #fff;
           background-color: $blueTemplateColor;
           cursor: pointer;
+
           &:hover {
-            background-color: darken($blueTemplateColor,30%);
+            background-color: darken($blueTemplateColor, 30%);
             transition: 0.5s;
           }
         }
@@ -1117,10 +1023,6 @@ header.container {
 
 .section-gmap {
   min-height: 42rem;
-
-  .info-map {
-
-  }
 }
 
 .section-feedback-form {
@@ -1203,14 +1105,12 @@ footer {
         li {
           text-transform: uppercase;
           font-weight: 500;
-          //margin-top: 32px;
           margin-top: 2rem;
 
           a {
             color: #000;
 
             i {
-              //margin-right: 10px;
               margin-right: 0.75rem;
               color: $blueTemplateColor;
               vertical-align: bottom;
@@ -1237,7 +1137,6 @@ footer {
     text-align: center;
 
     span {
-      //line-height: 40px;
       line-height: 2.5rem;
       color: #fff;
     }
@@ -1366,10 +1265,6 @@ footer {
   }
 }
 
-//.section-tour-order-form {
-//  font-size: 4rem;
-//}
-
 // ******** BACK TO TOP ARROW STYLES **************
 
 #back-to-top-button {
@@ -1377,7 +1272,6 @@ footer {
   bottom: 1rem;
   right: 2rem;
   padding: 15px;
-  //transform: translate(-50%, -50%);
 
   span {
     display: block;
@@ -1464,6 +1358,7 @@ footer {
       text-align: center;
     }
   }
+
   .not-valid {
     color: $redTemplateColor;
   }
@@ -1580,6 +1475,7 @@ footer {
 
 .modal-content {
   text-align: center;
+
   .modal-body {
     i {
       font-size: 5rem;

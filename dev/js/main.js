@@ -3,7 +3,6 @@
 
         const $window = $(window);
 
-
 // **************************  slick-sliders initialized **********************
 
         $('.hero-section-slider').slick({
@@ -93,6 +92,7 @@
         // ****************************************************************************
 
         // ***** hide/show textContainer in hero-section when burger-button clicked ***
+
         const $textContainer = $('.text-container');
 
         $('.navbar-toggler').click(function () {
@@ -100,10 +100,6 @@
         });
 
         // ****************************************************************************
-
-
-
-
 
         // ********************* PARALLAX EFFECT FOR PLANE AND SHADOW ***************
 
@@ -123,11 +119,6 @@
 
 
         $window.on('mousemove', function (e) {
-
-            // console.log('x' + e.clientX);
-            // console.log('y' + e.clientY);
-            // console.log('top' + shadow.position().top);
-            // console.log('left' + shadow.position().left);
 
             plane.css({
                 left: planeLeft - e.clientX / 3 + 150,

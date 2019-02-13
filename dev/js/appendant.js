@@ -7,11 +7,8 @@
         // ******************************** hide/show back-to-top-button **************
 
         let backToTopButton = $('#back-to-top-button'),
-            // firstSection = $('.hero-section'),              //cant make search of 2 first section
-            // secondSection = $('.section-feature-trip'),
             headerNavBar = $('.navbar');
         const
-            // [firstSection, secondSection] = $('main > section').slice(0, 2),
             sections = $('main > section'),
             firstSection = sections.eq(0),
             secondSection = sections.eq(1),
@@ -40,7 +37,6 @@
             $root.animate({
                 scrollTop: 0
             }, 1000);
-            //    return false;
         });
 
         // *************************************************************************
@@ -50,7 +46,7 @@
             helpMeBlock = $('#help-me-block'),
             closeHelpBlock = $('#close-block'),
             callMeButton = $('#call-me');
-        helpMeBlock.hide();             // find it in html and set disp none inline
+        helpMeBlock.hide();
         helpMeButton.on('click', function () {
             $('p.not-valid').hide();
             helpMeButton.fadeOut();
@@ -72,11 +68,7 @@
                 // regExpName = /^[a-zA-Z\s]+$/gm,
                 // regExpMessage = /^[a-zA-Z0-9 ]{5,}$/gm;
 
-
-
-
         // **************************************************************************
-
 
         // ********************* FOR smoothly ANCHORS reaction and scrolling ********
 
@@ -114,8 +106,6 @@
             e.stopPropagation();
             checkPhoneNumber($(this));
         });
-
-
 
         // **************************************************************************
 

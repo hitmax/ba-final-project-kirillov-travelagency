@@ -15355,8 +15355,8 @@ html {
   display: block;
   height: 20px;
   width: 20px;
-  line-height: 0px;
-  font-size: 0px;
+  line-height: 0;
+  font-size: 0;
   cursor: pointer;
   background: transparent;
   color: transparent;
@@ -15997,9 +15997,8 @@ header.container .navbar-nav li {
 }
 
 .section-video-tour {
-  background: url("../images/bg-plane-top.png") no-repeat;
+  background: url("../images/bg-plane-top.png") no-repeat bottom;
   background-size: contain;
-  background-position: bottom;
   position: relative;
   overflow: hidden;
 }
@@ -16121,9 +16120,8 @@ header.container .navbar-nav li {
 }
 
 .section-blog {
-  background: url(../images/bg-plane-bottom.png) no-repeat;
+  background: url(../images/bg-plane-bottom.png) no-repeat top;
   background-size: contain;
-  background-position: top;
 }
 .section-blog .blog-grid .row .col {
   margin-bottom: 2rem;
@@ -16307,6 +16305,7 @@ header.container .navbar-nav li {
 .section-gmap {
   min-height: 42rem;
 }
+
 .section-feedback-form {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url("../images/bg-footer.jpg") repeat;
 }
