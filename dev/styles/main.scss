@@ -1104,6 +1104,11 @@ header.container {
           font-size: 3rem;
           color: #fff;
           background-color: $blueTemplateColor;
+          cursor: pointer;
+          &:hover {
+            background-color: darken($blueTemplateColor,30%);
+            transition: 0.5s;
+          }
         }
       }
     }

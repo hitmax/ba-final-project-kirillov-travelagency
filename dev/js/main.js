@@ -163,7 +163,7 @@ var map,
 function initMap() {
     var TravelAgency = {lat: 40.748489, lng: -73.985654},
         map = new google.maps.Map(document.getElementById('g-map'), {
-            center: {lat: 40.738298, lng: -73.985654},
+            center: {lat: 40.747000, lng: -73.985654},
             zoom: 14,
             styles: [
                 {

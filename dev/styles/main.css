@@ -16297,6 +16297,11 @@ header.container .navbar-nav li {
   font-size: 3rem;
   color: #fff;
   background-color: #00b1ff;
+  cursor: pointer;
+}
+.section-partners .subscribe-email .row .col:last-child button:hover {
+  background-color: #004766;
+  transition: 0.5s;
 }
 
 .section-gmap {
