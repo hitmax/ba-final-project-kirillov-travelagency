@@ -16568,6 +16568,9 @@ footer .container-fluid span {
   color: #ef5b5b;
   text-align: center;
 }
+#help-me-block .not-valid {
+  color: #ef5b5b;
+}
 
 #help-me-button {
   position: fixed;
@@ -16659,6 +16662,14 @@ footer .container-fluid span {
     transform: scale(1.2);
     opacity: 0;
   }
+}
+
+.modal-content {
+  text-align: center;
+}
+.modal-content .modal-body i {
+  font-size: 5rem;
+  color: #00b1ff;
 }
 
 /*# sourceMappingURL=main.css.map */

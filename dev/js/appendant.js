@@ -52,6 +52,7 @@
             callMeButton = $('#call-me');
         helpMeBlock.hide();             // find it in html and set disp none inline
         helpMeButton.on('click', function () {
+            $('p.not-valid').hide();
             helpMeButton.fadeOut();
             helpMeBlock.fadeIn();
         });
@@ -60,10 +61,22 @@
             helpMeBlock.fadeOut();
         });
         callMeButton.on('click', function () {
-            helpMeButton.fadeOut();
-            helpMeBlock.fadeOut();
+            // helpMeButton.fadeOut();
+            // helpMeBlock.fadeOut();
         });
         // **************************************************************************
+
+        // ********** RegExp for phone number/email/others and ARRAYS WITH DATA *****
+        const   regExpPhoneNumber = /^((\+380)+([0-9]){9})$/gm,
+                regExpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
+                regExpName = /^[a-zA-Z\s]+$/gm,
+                regExpMessage = /^[a-zA-Z0-9 ]{5,}+$/gm;
+
+
+
+
+        // **************************************************************************
+
 
         // ********************* FOR smoothly ANCHORS reaction and scrolling ********
 
@@ -77,6 +90,34 @@
         // **************************************************************************
 
 
+        // ********************* Validating form-custom-package  ********************
+
+        $('form.form-custom-package').on('submit', function (e) {
+            e.preventDefault();
+        });
+
+        // **************************************************************************
+
+        // ********************* Validating form help me block  ********************
+        function checkPhoneNumber(e) {
+            let phoneNumber = e.find('input[type=tel]');
+            console.log(phoneNumber.val());
+            if (!regExpPhoneNumber.test(phoneNumber.val())) {
+                e.find('p.not-valid').show();
+                phoneNumber.focus;
+                return false;
+            }
+        }
+
+        $('form#form-help-me-block').on('submit', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            checkPhoneNumber($(this));
+        });
+
+
+
+        // **************************************************************************
 
     });
 })(jQuery);

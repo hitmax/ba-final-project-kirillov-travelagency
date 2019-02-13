@@ -1361,22 +1361,27 @@
             <form method="post" action="/" id="feedback-message">
                 <div class="form-row">
                     <div class="col col-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Enter Your Name">
-                        <input type="email" class="form-control" placeholder="Enter Your Email Address">
-                        <input type="tel" class="form-control" placeholder="Enter Your Phone Number">
-                        <input type="text" class="form-control" placeholder="Enter Your Country">
+                        <input type="text" class="form-control" placeholder="Enter Your Name" required>
+                        <p class="not-valid" style="display: none">Please enter a valid name!</p>
+                        <input type="email" class="form-control" placeholder="Enter Your Email Address" required>
+                        <p class="not-valid" style="display: none">Please enter a valid email address!</p>
+                        <input type="tel" class="form-control" placeholder="Enter Your Phone Number" required>
+                        <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+                        <input type="text" class="form-control" placeholder="Enter Your Country" required>
                         <select id="inputQuestion" class="form-control">
-                            <option selected>Choose message category</option>
-                            <option>Booking Tours</option>
-                            <option>Booking Hotels</option>
-                            <option>General Issues</option>
-                            <option>Refund For Vouchers</option>
-                            <option>Suggestions For Improving The Service</option>
-                            <option>Other</option>
+                            <option value="0" selected>Choose message category</option>
+                            <option value="1">Booking Tours</option>
+                            <option value="2">Booking Hotels</option>
+                            <option value="3">General Issues</option>
+                            <option value="4">Refund For Vouchers</option>
+                            <option value="5">Suggestions For Improving The Service</option>
+                            <option value="6">Other</option>
                         </select>
+                        <p class="not-valid" style="display: none">Please choose category</p>
                     </div>
                     <div class="col col-12 col-sm-6">
                         <textarea class="form-control" placeholder="Your Message" required maxlength="1000"></textarea>
+                        <p class="not-valid" style="display: none">Message not less than 5 symbols</p>
                         <div class="form-inline">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -1506,9 +1511,10 @@
 <div id="help-me-block">
     <h2>Have any questions?</h2>
     <p>Enter your phone number and we will call you back</p>
-    <form action="javascript:void(0);">
+    <form action="javascript:void(0);" id="form-help-me-block">
         <input type="tel" placeholder="Your phone number" required>
-        <button type="submit" class="btn btn-success" id="call-me">Call me!</button>
+        <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+        <button type="submit" class="btn btn-success" id="call-me" data-toggle="modal" data-target="#thanksYouModalCenter">Call me!</button>
         <button type="reset" class="btn btn-danger" id="close-block">Close</button>
     </form>
 </div>
@@ -1519,6 +1525,25 @@
             <i class="fa fa-phone" aria-hidden="true"></i>
         </div>
         <div class="text">Need help?</div>
+    </div>
+</div>
+<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog" aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title" id="thanksYouModalCenterLongTitle">Thank you very much for the appeal</h2>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>We really respect our customers. We will contact you as soon as a free operator appears</p>
+                <i class="far fa-smile-wink" style="font-size: 5rem; text-align: center"></i>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
     </div>
 </div>
 

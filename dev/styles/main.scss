@@ -1459,6 +1459,9 @@ footer {
       text-align: center;
     }
   }
+  .not-valid {
+    color: $redTemplateColor;
+  }
 }
 
 // *********** styles for HELP ME button ***************
@@ -1568,7 +1571,17 @@ footer {
   }
 }
 
+// *********** styles for modal window ***************
 
+.modal-content {
+  text-align: center;
+  .modal-body {
+    i {
+      font-size: 5rem;
+      color: $blueTemplateColor;
+    }
+  }
+}
 
 
 
