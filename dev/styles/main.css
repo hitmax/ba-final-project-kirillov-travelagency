@@ -16336,9 +16336,12 @@ header.container .navbar-nav li {
 .section-feedback-form .container form .col input[type=submit] {
   width: 30%;
 }
-.section-feedback-form .container form .col textarea {
-  resize: none;
+.section-feedback-form .container form .col .textarea-wrapper {
   height: 80%;
+}
+.section-feedback-form .container form .col .textarea-wrapper textarea {
+  resize: none;
+  height: 100%;
 }
 
 footer {
@@ -16573,14 +16576,17 @@ footer .container-fluid span {
   text-align: center;
 }
 
+.not-valid, .valid {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
 .not-valid {
   color: #ef5b5b;
-  font-size: 1rem;
 }
 
 .valid {
   color: #008f06;
-  font-size: 1rem;
 }
 
 #help-me-button {

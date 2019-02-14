@@ -1061,10 +1061,15 @@ header.container {
           width: 30%;
         }
 
-        textarea {
-          resize: none;
+        .textarea-wrapper {
           height: 80%;
+
+          textarea {
+            resize: none;
+            height: 100%;
+          }
         }
+
       }
     }
   }
@@ -1361,14 +1366,17 @@ footer {
 
 }
 
+.not-valid, .valid {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
 .not-valid {
   color: $redTemplateColor;
-  font-size: 1rem;
 }
 
 .valid {
   color: #008f06;
-  font-size: 1rem;
 }
 
 // *********** styles for HELP ME button ***************

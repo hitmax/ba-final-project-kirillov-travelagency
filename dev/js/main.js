@@ -147,7 +147,8 @@
         // ************ validation for subscribe email form and message *************
         const regExpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
             regExpName = /^[a-zA-Z\s]+$/gm,
-            regExpMessage = /^[a-zA-Z0-9 ]{5,}$/gm;
+            regExpMessage = /^[a-zA-Z0-9 ]{5,}$/gm,
+            regExpPhoneNumber = /^((\+380)+([0-9]){9})$/gm;
 
         let $subscribeButton = $('#subscribe');
 
@@ -156,7 +157,7 @@
             let $form = $('#subscribe-email'),
                 email = $subscribeButton.siblings('input').val(),
                 emailMatched = email.match(regExpEmail);
-                // emailConfirm = regExpEmail.test(email);
+            // emailConfirm = regExpEmail.test(email);
             // console.log(email);
             // console.log(email.match(regExpEmail));
             // console.log(emailConfirm);
@@ -172,6 +173,78 @@
                 // e.stopImmediatePropagation();
             }
         });
+
+
+        let $sendMessage = $('#send-message'),
+            $form = $('#feedback-message');
+
+        $form.on('submit', function (e) {
+            // e.stopPropagation();
+            // e.preventDefault();
+
+            let $name = $form.find('#message-name');
+
+            if ($name.val().match(regExpName)) {
+                $name.siblings('p.not-valid').hide();
+                $name.siblings('p.valid').show();
+            } else {
+                $name.siblings('p.not-valid').show();
+                $name.siblings('p.valid').hide();
+            }
+
+            let $email = $form.find('#message-email');
+
+            if ($email.val().match(regExpEmail)) {
+                $email.siblings('p.not-valid').hide();
+                $email.siblings('p.valid').show();
+            } else {
+                $email.siblings('p.not-valid').show();
+                $email.siblings('p.valid').hide();
+            }
+
+            let $tel = $form.find('#message-tel');
+
+            if ($tel.val().match(regExpPhoneNumber)) {
+                $tel.siblings('p.not-valid').hide();
+                $tel.siblings('p.valid').show();
+            } else {
+                $tel.siblings('p.not-valid').show();
+                $tel.siblings('p.valid').hide();
+            }
+
+            let $country = $form.find('#message-country');
+
+            if ($country.val().match(regExpName)) {
+                $country.siblings('p.not-valid').hide();
+                $country.siblings('p.valid').show();
+            } else {
+                $country.siblings('p.not-valid').show();
+                $country.siblings('p.valid').hide();
+            }
+
+            let $text = $form.find('#message-text');
+
+            if ($text.val().match(regExpMessage)) {
+                $text.siblings('p.not-valid').hide();
+                $text.siblings('p.valid').show();
+            } else {
+                $text.siblings('p.not-valid').show();
+                $text.siblings('p.valid').hide();
+            }
+
+            let $inputQuestion = $form.find('#inputQuestion');
+
+            if ($inputQuestion.val() != 0) {
+                $inputQuestion.siblings('p.not-valid').hide();
+                $inputQuestion.siblings('p.valid').show();
+            } else {
+                $inputQuestion.siblings('p.not-valid').show();
+                $inputQuestion.siblings('p.valid').hide();
+            }
+
+
+        })
+
 
         // **************************************************************************
 

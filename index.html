@@ -1360,35 +1360,50 @@
                 <h2>We are ready to help you</h2>
                 <h3>Your Message</h3>
             </div>
-            <form method="post" action="/" id="feedback-message">
+            <form method="post" action="javascript:void(0);" id="feedback-message">
                 <div class="form-row">
                     <div class="col col-12 col-sm-6">
-                        <input type="text" class="form-control" placeholder="Enter Your Name" required>
-                        <p class="not-valid" style="display: none">Please enter a valid name!</p>
-                        <p class="valid" style="display: none">Look's good!</p>
-                        <input type="email" class="form-control" placeholder="Enter Your Email Address" required>
-                        <p class="not-valid" style="display: none">Please enter a valid email address!</p>
-                        <p class="valid" style="display: none">Look's good!</p>
-                        <input type="tel" class="form-control" placeholder="Enter Your Phone Number" required>
-                        <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
-                        <p class="valid" style="display: none">Look's good!</p>
-                        <input type="text" class="form-control" placeholder="Enter Your Country" required>
-                        <select id="inputQuestion" class="form-control">
-                            <option value="0" selected>Choose message category</option>
-                            <option value="1">Booking Tours</option>
-                            <option value="2">Booking Hotels</option>
-                            <option value="3">General Issues</option>
-                            <option value="4">Refund For Vouchers</option>
-                            <option value="5">Suggestions For Improving The Service</option>
-                            <option value="6">Other</option>
-                        </select>
-                        <p class="not-valid" style="display: none">Please choose category</p>
-                        <p class="valid" style="display: none">Look's good!</p>
+                        <div>
+                            <input type="text" id="message-name" class="form-control" placeholder="Enter Your Name"
+                                   required>
+                            <p class="not-valid" style="display: none">Please enter a valid name!</p>
+                            <p class="valid" style="display: none">Look's good!</p></div>
+                        <div>
+                            <input type="email" id="message-email" class="form-control"
+                                   placeholder="Enter Your Email Address" required>
+                            <p class="not-valid" style="display: none">Please enter a valid email address!</p>
+                            <p class="valid" style="display: none">Look's good!</p></div>
+                        <div>
+                            <input type="tel" id="message-tel" class="form-control"
+                                   placeholder="Enter Your Phone Number" required>
+                            <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+                            <p class="valid" style="display: none">Look's good!</p></div>
+                        <div>
+                            <input type="text" id="message-country" class="form-control"
+                                   placeholder="Enter Your Country" required>
+                            <p class="not-valid" style="display: none">Please enter your country</p>
+                            <p class="valid" style="display: none">Look's good!</p></div>
+                        <div>
+                            <select id="inputQuestion" class="form-control">
+                                <option value="0" selected>Choose message category</option>
+                                <option value="1">Booking Tours</option>
+                                <option value="2">Booking Hotels</option>
+                                <option value="3">General Issues</option>
+                                <option value="4">Refund For Vouchers</option>
+                                <option value="5">Suggestions For Improving The Service</option>
+                                <option value="6">Other</option>
+                            </select>
+                            <p class="not-valid" style="display: none">Please choose category</p>
+                            <p class="valid" style="display: none">Look's good!</p>
+                        </div>
                     </div>
                     <div class="col col-12 col-sm-6">
-                        <textarea class="form-control" placeholder="Your Message" required maxlength="1000"></textarea>
-                        <p class="not-valid" style="display: none">Message not less than 5 symbols</p>
-                        <p class="valid" style="display: none">Look's good!</p>
+                        <div class="textarea-wrapper">
+                            <textarea class="form-control" id="message-text" placeholder="Your Message" required
+                                      maxlength="1000"></textarea>
+                            <p class="not-valid" style="display: none">Message not less than 5 symbols</p>
+                            <p class="valid" style="display: none">Look's good!</p>
+                        </div>
                         <div class="form-inline">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
@@ -1396,7 +1411,7 @@
                                     I have already used this service
                                 </label>
                             </div>
-                            <input type="submit" class="btn btn-danger" value="Submit">
+                            <input type="submit" class="btn btn-danger" value="Submit" id="send-message">
                         </div>
                     </div>
                 </div>
@@ -1521,7 +1536,9 @@
     <form action="javascript:void(0);" id="form-help-me-block">
         <input type="tel" placeholder="Your phone number" required>
         <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
-        <button type="submit" class="btn btn-success" id="call-me" data-toggle="modal" data-target="#thanksYouModalCenter">Call me!</button>
+        <button type="submit" class="btn btn-success" id="call-me" data-toggle="modal"
+                data-target="#thanksYouModalCenter">Call me!
+        </button>
         <button type="reset" class="btn btn-danger" id="close-block">Close</button>
     </form>
 </div>
@@ -1534,7 +1551,8 @@
         <div class="text">Need help?</div>
     </div>
 </div>
-<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog" aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
