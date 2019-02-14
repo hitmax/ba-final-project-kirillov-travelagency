@@ -1336,11 +1336,13 @@
                             happiness Pleasure and praising pain was born and I will give you an account know that.</p>
                     </div>
                     <div class="col col-12 col-sm-6">
-                        <form action="javascript:void(0);">
+                        <form action="javascript:void(0);" id="subscribe-email">
                             <input type="email" placeholder="Enter Your Email Address" required>
-                            <button type="submit">
+                            <button type="submit" id="subscribe">
                                 <i class="fas fa-paper-plane"></i>
                             </button>
+                            <p class="not-valid" style="display: none">Please enter a valid email address</p>
+                            <p class="valid" style="display: none">Thank you for subscribe!</p>
                         </form>
                     </div>
                 </div>
@@ -1363,10 +1365,13 @@
                     <div class="col col-12 col-sm-6">
                         <input type="text" class="form-control" placeholder="Enter Your Name" required>
                         <p class="not-valid" style="display: none">Please enter a valid name!</p>
+                        <p class="valid" style="display: none">Look's good!</p>
                         <input type="email" class="form-control" placeholder="Enter Your Email Address" required>
                         <p class="not-valid" style="display: none">Please enter a valid email address!</p>
+                        <p class="valid" style="display: none">Look's good!</p>
                         <input type="tel" class="form-control" placeholder="Enter Your Phone Number" required>
                         <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+                        <p class="valid" style="display: none">Look's good!</p>
                         <input type="text" class="form-control" placeholder="Enter Your Country" required>
                         <select id="inputQuestion" class="form-control">
                             <option value="0" selected>Choose message category</option>
@@ -1378,10 +1383,12 @@
                             <option value="6">Other</option>
                         </select>
                         <p class="not-valid" style="display: none">Please choose category</p>
+                        <p class="valid" style="display: none">Look's good!</p>
                     </div>
                     <div class="col col-12 col-sm-6">
                         <textarea class="form-control" placeholder="Your Message" required maxlength="1000"></textarea>
                         <p class="not-valid" style="display: none">Message not less than 5 symbols</p>
+                        <p class="valid" style="display: none">Look's good!</p>
                         <div class="form-inline">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">

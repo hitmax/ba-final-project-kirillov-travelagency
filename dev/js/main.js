@@ -144,6 +144,38 @@
 
         // **************************************************************************
 
+        // ************ validation for subscribe email form and message *************
+        const regExpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
+            regExpName = /^[a-zA-Z\s]+$/gm,
+            regExpMessage = /^[a-zA-Z0-9 ]{5,}$/gm;
+
+        let $subscribeButton = $('#subscribe');
+
+        $subscribeButton.on('click', function (e) {
+            e.preventDefault();
+            let $form = $('#subscribe-email'),
+                email = $subscribeButton.siblings('input').val(),
+                emailMatched = email.match(regExpEmail);
+                // emailConfirm = regExpEmail.test(email);
+            // console.log(email);
+            // console.log(email.match(regExpEmail));
+            // console.log(emailConfirm);
+            // if (emailConfirm) {
+            if (emailMatched) {
+                $form.find('p.not-valid').hide();
+                $form.find('p.valid').show();
+                console.log(1);
+            } else {
+                $form.find('p.not-valid').show();
+                $form.find('p.valid').hide();
+                console.log(2);
+                // e.stopImmediatePropagation();
+            }
+        });
+
+        // **************************************************************************
+
+
     });
 })(jQuery);
 

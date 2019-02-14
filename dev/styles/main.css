@@ -16572,8 +16572,15 @@ footer .container-fluid span {
   color: #ef5b5b;
   text-align: center;
 }
-#help-me-block .not-valid {
+
+.not-valid {
   color: #ef5b5b;
+  font-size: 1rem;
+}
+
+.valid {
+  color: #008f06;
+  font-size: 1rem;
 }
 
 #help-me-button {

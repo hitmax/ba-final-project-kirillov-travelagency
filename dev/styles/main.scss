@@ -1359,9 +1359,16 @@ footer {
     }
   }
 
-  .not-valid {
-    color: $redTemplateColor;
-  }
+}
+
+.not-valid {
+  color: $redTemplateColor;
+  font-size: 1rem;
+}
+
+.valid {
+  color: #008f06;
+  font-size: 1rem;
 }
 
 // *********** styles for HELP ME button ***************
