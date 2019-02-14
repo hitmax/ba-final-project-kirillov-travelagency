@@ -1487,6 +1487,29 @@ footer {
 // *********** styles for section-tour-order-form  calculator***************
 
 .section-tour-order-form {
+  .col-12 > div {
+    margin-bottom: 2rem;
+  }
+
+  label {
+    min-width: 50%;
+  }
+
+  input[type=radio] {
+    margin-right: 1rem;
+  }
+
+  .radio-button-wrapper {
+    margin-bottom: 1rem;
+  }
+
+  .quantity-num, .quantity-arrow-minus, .quantity-arrow-plus {
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    vertical-align: middle;
+  }
+
   input[type=number]::-webkit-inner-spin-button,
   input[type=number]::-webkit-outer-spin-button {
     -webkit-appearance: none;
@@ -1494,8 +1517,64 @@ footer {
     appearance: none;
     margin: 0;
   }
-  input[type=number]{
+
+  input[type=number] {
     -moz-appearance: textfield;
+  }
+
+  .form-row > div:last-child {
+    display: flex;
+    flex-direction: column;
+  }
+
+  table {
+    width: 100%;
+    height: 50%;
+
+    td, th {
+      border: 1px solid $greyTextColor;
+      text-align: center;
+    }
+
+    th {
+      color: darken($redTemplateColor, 30%);
+      font-size: 1.2rem;
+    }
+
+    td {
+      font-size: 1rem;
+    }
+
+    border-collapse: collapse;
+  }
+
+  strong {
+    color: darken($redTemplateColor, 30%);
+  }
+
+  .discount, .total-price, .standart-price {
+    display: block;
+    font-size: 1.5rem;
+    margin: 1rem 0;
+
+    span {
+      min-width: 4rem;
+      display: inline-block;
+      text-align: center;
+      margin: 0 1rem;
+    }
+  }
+
+  .standart-price {
+    margin-top: auto;
+  }
+
+  .discount {
+    color: $blueTemplateColor;
+  }
+
+  .total-price {
+    color: $redTemplateColor;
   }
 }
 
