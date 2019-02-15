@@ -6,8 +6,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  * Forked from Normalize.css, licensed MIT (https://github.com/necolas/normalize.css/blob/master/LICENSE.md)
  */
-@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,700|Poppins:400,500,600|Raleway:400,600,700");
-@import url("https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Marck+Script|Montserrat:400,400i,500,600,700");
 *,
 *::before,
 *::after {
@@ -15542,7 +15541,7 @@ header.container .navbar a {
   cursor: pointer;
 }
 header.container .navbar .navbar-collapse, header.container .navbar .btn {
-  font-weight: 900;
+  font-weight: 700;
 }
 header.container .navbar .navbar-collapse {
   position: relative;
@@ -15728,7 +15727,7 @@ header.container .navbar-nav li {
 .travel-card .info-block .current-price {
   float: right;
   color: #00b1ff;
-  font-weight: 900;
+  font-weight: 700;
 }
 .travel-card .info-block .past-price {
   float: right;

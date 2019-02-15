@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#convenience">ABOUT</a>
+                        <a class="nav-link anchor" href="index.html#convenience">ABOUT</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownTour" role="button"
@@ -270,8 +270,96 @@
             </div>
         </div>
     </section>
-    <section class="section-tour-order-form container">
-        <h1>tour order form must be there!</h1>
+    <section class="section-tour-order-form container-fluid">
+        <div class="container">
+            <div class="section-head">
+                <h2>We are waiting for your order</h2>
+                <h3>Сalculate the cost of your trip online!</h3>
+            </div>
+            <form action="javascript:void(0);" class="form-row">
+                <div class="col-12 col-md-6">
+                    <div>
+                        <label for="adults-quantity">Enter quantity of adults</label>
+                        <button class="quantity-arrow-minus btn btn-outline-danger"> -</button>
+                        <input class="quantity-num" type="number" min="1" max="20" value="1" required
+                               id="adults-quantity">
+                        <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
+                    </div>
+                    <div>
+                        <label for="kids-quantity">Enter quantity of kids</label>
+                        <button class="quantity-arrow-minus btn btn-outline-danger"> -</button>
+                        <input class="quantity-num" type="number" min="0" max="20" value="0" required
+                               id="kids-quantity">
+                        <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
+                    </div>
+                    <div>
+                        <p>Select hotel rating:</p>
+                        <div class="radio-button-wrapper">
+                            <input type="radio" name="hotel-stars" id="3star" value="3" checked>
+                            <label class="form-check-label" for="3star">
+                                Three star hotel
+                            </label>
+                        </div>
+                        <div class="radio-button-wrapper">
+                            <input type="radio" name="hotel-stars" id="4star" value="4">
+                            <label class="form-check-label" for="4star">
+                                Four star hotel
+                            </label>
+                        </div>
+                        <div class="radio-button-wrapper">
+                            <input type="radio" name="hotel-stars" id="5star" value="5">
+                            <label class="form-check-label" for="5star">
+                                Five star hotel
+                            </label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="amount-of-days">Enter amount of days</label>
+                        <button class="quantity-arrow-minus btn btn-outline-danger"> -</button>
+                        <input class="quantity-num" type="number" min="1" max="30" value="1" required
+                               id="amount-of-days">
+                        <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
+                    </div>
+                    <button type="submit" class="btn btn-danger" id="calculate-it">Calculate price</button>
+                </div>
+                <div class="col-12 col-md-6">
+                    <table>
+                        <tr>
+                            <th>Hotel rating</th>
+                            <th>3 stars</th>
+                            <th>4 stars</th>
+                            <th>5 stars</th>
+                        </tr>
+                        <tr>
+                            <td>For adults</td>
+                            <td>100$</td>
+                            <td>150$</td>
+                            <td>200$</td>
+                        </tr>
+                        <tr>
+                            <td>For kids</td>
+                            <td>50$</td>
+                            <td>70$</td>
+                            <td>90$</td>
+                        </tr>
+                    </table>
+                    <p>Airfare is not included in the total cost!<br>
+                        If the tour lasts more than 10 days -
+                        <strong>10% discount!</strong>
+                    </p>
+                    <span class="standart-price">Standart price: <span id="standart-price">0</span> $</span>
+                    <em class="discount">You will save:
+                        <span id="discount">0</span>
+                        $
+                    </em>
+                    <strong class="total-price">Total Price:
+                        <span id="total-price">0</span>
+                        $
+                    </strong>
+                </div>
+
+            </form>
+        </div>
     </section>
     <footer>
         <div class="container">
@@ -389,9 +477,12 @@
 <div id="help-me-block">
     <h2>Have any questions?</h2>
     <p>Enter your phone number and we will call you back</p>
-    <form action="javascript:void(0);">
+    <form action="javascript:void(0);" id="form-help-me-block">
         <input type="tel" placeholder="Your phone number" required>
-        <button type="submit" class="btn btn-success" id="call-me">Call me!</button>
+        <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+        <button type="submit" class="btn btn-success" id="call-me" data-toggle="modal"
+                data-target="#thanksYouModalCenter">Call me!
+        </button>
         <button type="reset" class="btn btn-danger" id="close-block">Close</button>
     </form>
 </div>
@@ -404,7 +495,8 @@
         <div class="text">Need help?</div>
     </div>
 </div>
-<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog" aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
+<div class="modal fade" id="thanksYouModalCenter" tabindex="-1" role="dialog"
+     aria-labelledby="thanksYouModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
             <div class="modal-header">
@@ -429,6 +521,7 @@
 <script src="dev/js/bootstrap/bootstrap.js" defer></script>
 <script src="dev/js/bootstrap/bootstrap.bundle.js" defer></script>
 <script src="dev/js/appendant.js" defer></script>
+<script src="dev/js/calculator.js" defer></script>
 </body>
 </html>
 

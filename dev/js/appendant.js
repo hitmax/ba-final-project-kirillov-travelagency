@@ -4,14 +4,7 @@
         const $root = $('html'),
             $window = $(window);
 
-        // ********** RegExp for phone number/email/others and ARRAYS WITH DATA *****
-        const regExpPhoneNumber = /^((\+380)+([0-9]){9})$/gm;
-
-
-        // **************************************************************************
-
-
-        // ******************************** hide/show back-to-top-button **************
+        // ********** hide/show back-to-top-button and header's padding ************
 
         let backToTopButton = $('#back-to-top-button'),
             headerNavBar = $('.navbar');
@@ -64,9 +57,8 @@
             helpMeBlock.fadeOut();
         });
 
-
         // ********************* Validating form help me block  ********************
-
+        const regExpPhoneNumber = /^((\+380)+([0-9]){9})$/gm;
         callMeButton.on('click', function (e) {
             const $form = $('#form-help-me-block');
             const phone = $form.find('input').val();
@@ -83,7 +75,6 @@
 
         // **************************************************************************
 
-
         // ********************* FOR smoothly ANCHORS reaction and scrolling ********
 
         $('a.anchor').click(function () {
@@ -94,20 +85,6 @@
             return false;
         });
         // **************************************************************************
-
-
-        // ********************* Validating form-custom-package  ********************
-
-        $('form.form-custom-package').on('submit', function (e) {
-            e.preventDefault();
-        });
-
-        // **************************************************************************
-
-
-
-
-
 
     });
 })(jQuery);

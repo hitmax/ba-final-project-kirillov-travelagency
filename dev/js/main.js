@@ -1,7 +1,7 @@
 ;(function ($) {
     $(function () {
 
-        const $window = $(window);
+        let $window = $(window);
 
 // **************************  slick-sliders initialized **********************
 
@@ -93,7 +93,7 @@
 
         // ***** hide/show textContainer in hero-section when burger-button clicked ***
 
-        const $textContainer = $('.text-container');
+        let $textContainer = $('.text-container');
 
         $('.navbar-toggler').click(function () {
             $textContainer.toggleClass('hidden');
@@ -145,92 +145,40 @@
         // **************************************************************************
 
         // ************ validation for subscribe email form and message *************
-        const regExpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
+        let regExpEmail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/gm,
             regExpName = /^[a-zA-Z\s]+$/gm,
             regExpMessage = /^[a-zA-Z0-9 ]{5,}$/gm,
             regExpPhoneNumber = /^((\+380)+([0-9]){9})$/gm;
+
+        function validate($element, pattern) {
+            if ($element.val().match(pattern)) {
+                $element.siblings('p.not-valid').hide();
+                $element.siblings('p.valid').show();
+            } else {
+                $element.siblings('p.not-valid').show();
+                $element.siblings('p.valid').hide();
+            }
+        }
 
         let $subscribeButton = $('#subscribe');
 
         $subscribeButton.on('click', function (e) {
             e.preventDefault();
-            let $form = $('#subscribe-email'),
-                email = $subscribeButton.siblings('input').val(),
-                emailMatched = email.match(regExpEmail);
-            // emailConfirm = regExpEmail.test(email);
-            // console.log(email);
-            // console.log(email.match(regExpEmail));
-            // console.log(emailConfirm);
-            // if (emailConfirm) {
-            if (emailMatched) {
-                $form.find('p.not-valid').hide();
-                $form.find('p.valid').show();
-                console.log(1);
-            } else {
-                $form.find('p.not-valid').show();
-                $form.find('p.valid').hide();
-                console.log(2);
-                // e.stopImmediatePropagation();
-            }
+            let $email = $subscribeButton.siblings('input');
+
+            validate($email, regExpEmail);
+
         });
 
+        let $form = $('#feedback-message');
 
-        let $sendMessage = $('#send-message'),
-            $form = $('#feedback-message');
+        $form.on('submit', function () {
 
-        $form.on('submit', function (e) {
-            // e.stopPropagation();
-            // e.preventDefault();
-
-            let $name = $form.find('#message-name');
-
-            if ($name.val().match(regExpName)) {
-                $name.siblings('p.not-valid').hide();
-                $name.siblings('p.valid').show();
-            } else {
-                $name.siblings('p.not-valid').show();
-                $name.siblings('p.valid').hide();
-            }
-
-            let $email = $form.find('#message-email');
-
-            if ($email.val().match(regExpEmail)) {
-                $email.siblings('p.not-valid').hide();
-                $email.siblings('p.valid').show();
-            } else {
-                $email.siblings('p.not-valid').show();
-                $email.siblings('p.valid').hide();
-            }
-
-            let $tel = $form.find('#message-tel');
-
-            if ($tel.val().match(regExpPhoneNumber)) {
-                $tel.siblings('p.not-valid').hide();
-                $tel.siblings('p.valid').show();
-            } else {
-                $tel.siblings('p.not-valid').show();
-                $tel.siblings('p.valid').hide();
-            }
-
-            let $country = $form.find('#message-country');
-
-            if ($country.val().match(regExpName)) {
-                $country.siblings('p.not-valid').hide();
-                $country.siblings('p.valid').show();
-            } else {
-                $country.siblings('p.not-valid').show();
-                $country.siblings('p.valid').hide();
-            }
-
-            let $text = $form.find('#message-text');
-
-            if ($text.val().match(regExpMessage)) {
-                $text.siblings('p.not-valid').hide();
-                $text.siblings('p.valid').show();
-            } else {
-                $text.siblings('p.not-valid').show();
-                $text.siblings('p.valid').hide();
-            }
+            let $name = $form.find('#message-name'),
+                $email = $form.find('#message-email'),
+                $tel = $form.find('#message-tel'),
+                $country = $form.find('#message-country'),
+                $text = $form.find('#message-text');
 
             let $inputQuestion = $form.find('#inputQuestion');
 
@@ -242,12 +190,19 @@
                 $inputQuestion.siblings('p.valid').hide();
             }
 
+            validate($name, regExpName);
 
-        })
+            validate($email, regExpEmail);
 
+            validate($tel, regExpPhoneNumber);
+
+            validate($country, regExpName);
+
+            validate($text, regExpMessage);
+
+        });
 
         // **************************************************************************
-
 
     });
 })(jQuery);
@@ -260,91 +215,7 @@ function initMap() {
     var TravelAgency = {lat: 40.748489, lng: -73.985654},
         map = new google.maps.Map(document.getElementById('g-map'), {
             center: {lat: 40.747000, lng: -73.985654},
-            zoom: 14,
-            styles: [
-                {
-                    "featureType": "road",
-                    "elementType": "geometry",
-                    "stylers": [
-                        {
-                            "visibility": "simplified"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.arterial",
-                    "stylers": [
-                        {
-                            "hue": 149
-                        },
-                        {
-                            "saturation": -78
-                        },
-                        {
-                            "lightness": 0
-                        }
-                    ]
-                },
-                {
-                    "featureType": "road.highway",
-                    "stylers": [
-                        {
-                            "hue": -31
-                        },
-                        {
-                            "saturation": -40
-                        },
-                        {
-                            "lightness": 2.8
-                        }
-                    ]
-                },
-                {
-                    "featureType": "poi",
-                    "elementType": "label",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "landscape",
-                    "stylers": [
-                        {
-                            "hue": 163
-                        },
-                        {
-                            "saturation": -26
-                        },
-                        {
-                            "lightness": -1.1
-                        }
-                    ]
-                },
-                {
-                    "featureType": "transit",
-                    "stylers": [
-                        {
-                            "visibility": "off"
-                        }
-                    ]
-                },
-                {
-                    "featureType": "water",
-                    "stylers": [
-                        {
-                            "hue": 3
-                        },
-                        {
-                            "saturation": -24.24
-                        },
-                        {
-                            "lightness": -38.57
-                        }
-                    ]
-                }
-            ]
+            zoom: 14
         }),
 
         marker = new google.maps.Marker({
@@ -354,6 +225,4 @@ function initMap() {
             title: 'TravelAgency'
         });
 
-    marker.setMap(map);
-    // marker.initMap(map);
 }

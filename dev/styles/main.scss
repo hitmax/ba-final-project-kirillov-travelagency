@@ -1,14 +1,13 @@
 // ********* z-index's ************
-//header  z-index: 5;
-//#plane  z-index: 4;
-//#shadow z-index: 3;
-//#clouds z-index: 2;
 //section-video-tour bg-image z-index: 1;
+//#clouds z-index: 2;
+//#shadow z-index: 3;
+//#plane  z-index: 4;
+//header  z-index: 5;
 //slick-arrows z-index: 10;
 //.button-play-wrapper z-index: 15;
 //help-me block z-index: 20;
 //help-me button z-index: 20;
-
 
 $blueTemplateColor: #00b1ff;
 $redTemplateColor: #ef5b5b;
@@ -19,8 +18,7 @@ $goldenTextColor: #ffc811;
 @import 'bootstrap/bootstrap';
 @import 'bootstrap/bootstrap-grid';
 @import 'slick-slider-styles';
-@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700|Open+Sans:400,700|Poppins:400,500,600|Raleway:400,600,700');
-@import url('https://fonts.googleapis.com/css?family=Marck+Script&subset=cyrillic');
+@import url('https://fonts.googleapis.com/css?family=Marck+Script|Montserrat:400,400i,500,600,700');
 
 // svg rules
 .cls-1 {
@@ -154,7 +152,7 @@ header.container {
     }
 
     .navbar-collapse, .btn {
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .navbar-collapse {
@@ -359,7 +357,7 @@ header.container {
     .current-price {
       float: right;
       color: $blueTemplateColor;
-      font-weight: 900;
+      font-weight: 700;
     }
 
     .past-price {

@@ -46,7 +46,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#convenience">ABOUT</a>
+                        <a class="nav-link anchor" href="index.html#convenience">ABOUT</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownTour" role="button"
@@ -292,14 +292,14 @@
                     <div>
                         <label for="adults-quantity">Enter quantity of adults</label>
                         <button class="quantity-arrow-minus btn btn-outline-danger"> -</button>
-                        <input class="quantity-num" type="number" min="1" max="20" value="1" required
+                        <input class="quantity-num" type="number" min="1" max="30" value="1" required
                                id="adults-quantity">
                         <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
                     </div>
                     <div>
                         <label for="kids-quantity">Enter quantity of kids</label>
                         <button class="quantity-arrow-minus btn btn-outline-danger"> -</button>
-                        <input class="quantity-num" type="number" min="0" max="20" value="0" required
+                        <input class="quantity-num" type="number" min="0" max="30" value="0" required
                                id="kids-quantity">
                         <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
                     </div>
@@ -331,7 +331,7 @@
                                id="amount-of-days">
                         <button class="quantity-arrow-plus btn btn-outline-success"> +</button>
                     </div>
-                        <button type="submit" class="btn btn-danger" id="calculate-it">Calculate price</button>
+                    <button type="submit" class="btn btn-danger" id="calculate-it">Calculate price</button>
                 </div>
                 <div class="col-12 col-md-6">
                     <table>
@@ -354,7 +354,8 @@
                             <td>90$</td>
                         </tr>
                     </table>
-                    <p>Airfare is not included in the total cost!<br>
+                    <p>Airfare is not included in the total cost!
+                        <br>
                         If the tour lasts more than 10 days -
                         <strong>10% discount!</strong>
                     </p>
@@ -368,7 +369,6 @@
                         $
                     </strong>
                 </div>
-
             </form>
         </div>
     </section>
@@ -488,9 +488,12 @@
 <div id="help-me-block">
     <h2>Have any questions?</h2>
     <p>Enter your phone number and we will call you back</p>
-    <form action="javascript:void(0);">
+    <form action="javascript:void(0);" id="form-help-me-block">
         <input type="tel" placeholder="Your phone number" required>
-        <button type="submit" class="btn btn-success" id="call-me">Call me!</button>
+        <p class="not-valid" style="display: none">Please enter a valid phone number!</p>
+        <button type="submit" class="btn btn-success" id="call-me" data-toggle="modal"
+                data-target="#thanksYouModalCenter">Call me!
+        </button>
         <button type="reset" class="btn btn-danger" id="close-block">Close</button>
     </form>
 </div>

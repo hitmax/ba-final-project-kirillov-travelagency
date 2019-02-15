@@ -3,6 +3,13 @@
 
 // ********************* section with calculator  ********************
 
+        let adultPrice3starHotel = 100,
+            adultPrice4starHotel = 150,
+            adultPrice5starHotel = 200,
+            kidsPrice3starHotel = 50,
+            kidsPrice4starHotel = 70,
+            kidsPrice5starHotel = 90;
+
         function quantityMinus(elem) {
             if (elem.val() > 0) {
                 elem.val(elem.val() - 1);
@@ -10,7 +17,9 @@
         }
 
         function quantityPlus(elem) {
-            elem.val(+elem.val() + 1);
+            if (elem.val() < 30) {
+                elem.val(+elem.val() + 1);
+            }
         }
 
         function getHotelStarsCount() {
@@ -20,15 +29,14 @@
         function calculateTotalSum(adults, kids, hotel, days) {
             let totalSum;
             if (hotel === 3) {
-                totalSum = (adults * 100 + kids * 50) * days;
+                totalSum = (adults * adultPrice3starHotel + kids * kidsPrice3starHotel) * days;
             } else if (hotel === 4) {
-                totalSum = (adults * 150 + kids * 70) * days;
+                totalSum = (adults * adultPrice4starHotel + kids * kidsPrice4starHotel) * days;
             } else {
-                totalSum = (adults * 200 + kids * 90) * days;
+                totalSum = (adults * adultPrice5starHotel + kids * kidsPrice5starHotel) * days;
             }
 
             return totalSum;
-
         }
 
         $('.quantity-arrow-minus').on('click', function () {
