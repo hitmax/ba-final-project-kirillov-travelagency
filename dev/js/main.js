@@ -204,6 +204,47 @@
 
         // **************************************************************************
 
+        // ****************** countTo animate for awards section ********************
+
+        let show = true,
+            $countbox = $(".section-awards"),
+            $countToClients = $('.count-to-clients'),
+            $countToMembers = $('.count-to-members'),
+            $countToTours = $('.count-to-tours'),
+            $countToAwards = $('.count-to-awards');
+        $window.on("scroll load resize", function () {
+            if (!show) return false;
+            let w_top = $window.scrollTop(),
+                e_top = $countbox.offset().top,
+                w_height = $window.height(),
+                d_height = $(document).height(),
+                e_height = $countbox.outerHeight();
+            if (w_top + w_height - e_height >= e_top || w_height + w_top == d_height || e_height + e_top < w_height) {
+
+                $countToClients.spincrement({
+                    thousandSeparator: "",
+                    duration: 2000
+                });
+                $countToMembers.spincrement({
+                    thousandSeparator: "",
+                    duration: 3000
+                });
+                $countToTours.spincrement({
+                    thousandSeparator: "",
+                    duration: 4000
+                });
+                $countToAwards.spincrement({
+                    thousandSeparator: "",
+                    duration: 5000
+                });
+
+                show = false;
+            }
+        });
+
+
+        // **************************************************************************
+
     });
 })(jQuery);
 
