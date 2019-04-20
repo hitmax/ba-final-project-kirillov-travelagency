@@ -1,4 +1,6 @@
 package-lock.json
 .idea/
+.gulp/
+.git/
 **/.idea/
 **/node_modules/
