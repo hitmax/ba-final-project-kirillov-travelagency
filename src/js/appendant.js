@@ -6,38 +6,40 @@
 
         // ********** hide/show back-to-top-button and header's padding ************
 
-        var backToTopButton = $('#back-to-top-button'),
-            headerNavBar = $('.navbar');
-        var
-            sections = $('main > section'),
-            firstSection = sections.eq(0),
-            secondSection = sections.eq(1),
+        requestAnimationFrame(() => {
+            var backToTopButton = $('#back-to-top-button'),
+                headerNavBar = $('.navbar');
+            var sections = $('main > section'),
+                firstSection = sections.eq(0),
+                secondSection = sections.eq(1),
+                firstTwoSectionHeight = firstSection.height() + secondSection.height();
 
-            firstTwoSectionHeight = firstSection.height() + secondSection.height();
+console.log(firstTwoSectionHeight)
+            backToTopButton.hide();
 
-        backToTopButton.hide();
+            $window.scroll(function () {
+                var scrollVal = $(this).scrollTop();
+                if (scrollVal > firstTwoSectionHeight) {
+                    backToTopButton.fadeIn();
+                } else {
+                    backToTopButton.fadeOut();
+                }
 
-        $window.scroll(function () {
-            var scrollVal = $(this).scrollTop();
-            if (scrollVal > firstTwoSectionHeight) {
-                backToTopButton.fadeIn();
-            } else {
-                backToTopButton.fadeOut();
-            }
-
-            if (scrollVal > 10) {
-                headerNavBar.css('padding', '0.5rem 1.5rem');
-            } else {
-                headerNavBar.css('padding', '2rem 1.5rem');
-            }
-        });
+                if (scrollVal > 10) {
+                    headerNavBar.css('padding', '0.5rem 1.5rem');
+                } else {
+                    headerNavBar.css('padding', '2rem 1.5rem');
+                }
+            });
 
 
-        backToTopButton.on('click', function () {
-            $root.animate({
-                scrollTop: 0
-            }, 1000);
-        });
+            backToTopButton.on('click', function () {
+                $root.animate({
+                    scrollTop: 0
+                }, 1000);
+            });
+        })
+
 
         // *************************************************************************
 
