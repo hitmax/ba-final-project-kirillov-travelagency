@@ -5,16 +5,15 @@
             $window = $(window);
 
         // ********** hide/show back-to-top-button and header's padding ************
-
-        requestAnimationFrame(() => {
+        $(document).ready(function () {
             var backToTopButton = $('#back-to-top-button'),
                 headerNavBar = $('.navbar');
+
             var sections = $('main > section'),
                 firstSection = sections.eq(0),
                 secondSection = sections.eq(1),
                 firstTwoSectionHeight = firstSection.height() + secondSection.height();
 
-console.log(firstTwoSectionHeight)
             backToTopButton.hide();
 
             $window.scroll(function () {
@@ -31,14 +30,14 @@ console.log(firstTwoSectionHeight)
                     headerNavBar.css('padding', '2rem 1.5rem');
                 }
             });
-
-
             backToTopButton.on('click', function () {
                 $root.animate({
                     scrollTop: 0
                 }, 1000);
             });
-        })
+        });
+
+
 
 
         // *************************************************************************

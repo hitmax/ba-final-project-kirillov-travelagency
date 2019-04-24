@@ -49,14 +49,17 @@ html, body {
     font: 1.75rem 'Marck Script', cursive;
     color: $redTemplateColor;
     text-transform: capitalize;
-    margin: 0.5rem 0;
+    //margin: 0.5rem 0;                       !!!
+    margin-bottom: 0.5rem;
   }
 
   h3 {
     font-size: 1.5rem;
     font-weight: 600;
     text-transform: capitalize;
-    margin: 0.75rem 0;
+    //margin: 0.75rem 0;                      !!!
+    margin-bottom: 0.75rem;
+
   }
 
   h4 {
@@ -67,7 +70,8 @@ html, body {
   p {
     color: $greyTextColor;
     line-height: 1.75rem;
-    margin: 1rem 0;
+    //margin: 1rem 0;                          !!!
+    margin-bottom: 1rem;
   }
 
   .logo {
@@ -147,7 +151,7 @@ header.container {
     background: rgba(255, 255, 255, 0.9);
     transition: all 1s ease-in;
 
-    a {
+    .logo {
       cursor: pointer;
     }
 
@@ -186,7 +190,11 @@ header.container {
 
   .navbar-nav {
     li {
-      margin-right: 0.75rem;
+      margin: 0.5rem 1.25rem 0.5rem 0.5rem;
+      //margin-right: 0.75rem;
+    }
+    .nav-link {
+      padding: 0 !important;
     }
   }
 }
@@ -199,6 +207,7 @@ header.container {
       .text-container {
         display: inline-block;
         position: absolute;
+        max-width: 70%;
         top: 50%;
         left: 13%;
         transform: translateY(-50%);
@@ -352,6 +361,7 @@ header.container {
 
     h4 {
       display: inline-block;
+      min-width: 70%;
     }
 
     .current-price {
@@ -501,16 +511,21 @@ header.container {
 
 .section-tour-packages {
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/tour-package.jpg") top center no-repeat;
-
+  padding-top: 10rem !important;
+.section-tour-packages-slider {
+  margin-bottom: 6rem;
   .travel-card {
     margin: 0 15px;
     @media screen and (max-width: 440px) {
       margin: 0 5px;
     }
   }
+}
+
 
   .section-head {
-    margin: 5rem 0;
+    //margin: 5rem 0;                   !!!
+    margin-bottom: 5rem;
   }
 
   .form-custom-package {
@@ -893,11 +908,13 @@ header.container {
       font-size: 2rem;
       font-weight: 700;
       text-align: center;
+      max-width: 100%;
+      margin-bottom: 2.75rem;
     }
 
     p {
       text-align: center;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
       color: #000;
       width: 100%;
     }
@@ -1060,6 +1077,10 @@ header.container {
             position: relative;
             margin: 0;
           }
+          .form-check-label {
+            margin-left: 0.5em;
+          }
+
         }
 
         input[type="submit"] {
@@ -1089,6 +1110,9 @@ footer {
 
   .row {
     margin: 0;
+    .logo {
+      margin-bottom: 1rem;
+    }
 
     .col-12 {
       @media screen and (max-width: 575px) {
@@ -1102,6 +1126,13 @@ footer {
         font-size: 1.5rem;
         color: $blueTemplateColor;
         margin: 1rem 1rem 1rem 0;
+      }
+      a {
+        text-decoration: none;
+        color: $blueTemplateColor;
+      }
+      address {
+        display: inline-block;
       }
     }
 
@@ -1149,6 +1180,14 @@ footer {
     span {
       line-height: 2.5rem;
       color: #fff;
+      a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 600;
+        &:hover {
+          color: $goldenTextColor;
+        }
+      }
     }
   }
 }

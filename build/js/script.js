@@ -5,16 +5,15 @@
             $window = $(window);
 
         // ********** hide/show back-to-top-button and header's padding ************
-
-        requestAnimationFrame(() => {
+        $(document).ready(function () {
             var backToTopButton = $('#back-to-top-button'),
                 headerNavBar = $('.navbar');
+
             var sections = $('main > section'),
                 firstSection = sections.eq(0),
                 secondSection = sections.eq(1),
                 firstTwoSectionHeight = firstSection.height() + secondSection.height();
 
-console.log(firstTwoSectionHeight)
             backToTopButton.hide();
 
             $window.scroll(function () {
@@ -31,14 +30,14 @@ console.log(firstTwoSectionHeight)
                     headerNavBar.css('padding', '2rem 1.5rem');
                 }
             });
-
-
             backToTopButton.on('click', function () {
                 $root.animate({
                     scrollTop: 0
                 }, 1000);
             });
-        })
+        });
+
+
 
 
         // *************************************************************************
@@ -271,7 +270,6 @@ console.log(firstTwoSectionHeight)
 
         // ********************* PARALLAX EFFECT FOR PLANE AND SHADOW ***************
 
-
         var plane = $('#plane'),
             shadow = $('#shadow'),
             clouds1 = $('#clouds-1'),
@@ -284,7 +282,6 @@ console.log(firstTwoSectionHeight)
             clouds1Left = clouds1.position().left,
             clouds2Top = clouds2.position().top,
             clouds2Left = clouds2.position().left;
-
 
         $window.on('mousemove', function (e) {
 

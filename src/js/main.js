@@ -103,7 +103,6 @@
 
         // ********************* PARALLAX EFFECT FOR PLANE AND SHADOW ***************
 
-
         var plane = $('#plane'),
             shadow = $('#shadow'),
             clouds1 = $('#clouds-1'),
@@ -116,7 +115,6 @@
             clouds1Left = clouds1.position().left,
             clouds2Top = clouds2.position().top,
             clouds2Left = clouds2.position().left;
-
 
         $window.on('mousemove', function (e) {
 
