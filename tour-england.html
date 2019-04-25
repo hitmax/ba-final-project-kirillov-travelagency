@@ -6,10 +6,10 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TravelAgency England Tour</title>
-    <link rel="shortcut icon" href="dev/images/favicon.png" type="image/png">
+    <link rel="shortcut icon" href="build/img/favicon.png" type="image/png">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
           integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
-    <link rel="stylesheet" href="dev/styles/main.css">
+    <link rel="stylesheet" href="build/css/style.css">
 </head>
 <body>
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid"
@@ -24,7 +24,7 @@
 
     <header class="container">
         <nav class="navbar navbar-expand-lg navbar-light ">
-            <a href="index.html" class="logo">
+            <a href="index.html" class="navbar-brand">
                 <svg width="51" height="37" viewBox="0 0 51 37">
                     <use xlink:href="#logo-svg"></use>
                 </svg>
@@ -41,12 +41,12 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active">
-                        <a class="nav-link" href="index.html#hero">HOME
+                        <a class="nav-link anchor" href="#hero">HOME
                             <span class="sr-only">(current)</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link anchor" href="index.html#convenience">ABOUT</a>
+                        <a class="nav-link anchor" href="#convenience">ABOUT</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" id="navbarDropdownTour" role="button"
@@ -76,46 +76,44 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#blog">BLOG</a>
+                        <a class="nav-link anchor" href="#blog">BLOG</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="index.html#g-map">CONTACTS</a>
+                        <a class="nav-link anchor" href="#g-map">CONTACTS</a>
                     </li>
                 </ul>
-                <a href="index.html#tours">
-                    <button type="button" class="btn btn-outline-danger my-2 my-sm-0">BOOK NOW</button>
-                </a>
+                <a href="#tours" role="button" class="anchor btn btn-outline-danger my-2 my-sm-0">BOOK NOW</a>
             </div>
         </nav>
     </header>
     <section class="section-accordion-slider container-fluid">
         <ul class="accordion-slider">
             <li>
-                <img src="dev/images/slider-england-1.jpg" alt="england">
+                <img src="build/img/slider-england-1.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-2.jpg" alt="england">
+                <img src="build/img/slider-england-2.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-3.jpg" alt="england">
+                <img src="build/img/slider-england-3.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-4.jpg" alt="england">
+                <img src="build/img/slider-england-4.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-5.jpg" alt="england">
+                <img src="build/img/slider-england-5.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-6.jpg" alt="england">
+                <img src="build/img/slider-england-6.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-7.jpg" alt="england">
+                <img src="build/img/slider-england-7.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-8.jpg" alt="england">
+                <img src="build/img/slider-england-8.jpg" alt="england">
             </li>
             <li>
-                <img src="dev/images/slider-england-9.jpg" alt="england">
+                <img src="build/img/slider-england-9.jpg" alt="england">
             </li>
         </ul>
     </section>
@@ -133,7 +131,7 @@
             </div>
             <div class="col col-12 col-md">
                 <a href="javascript:void(0);">
-                    <img src="dev/images/map-england.jpg" alt="map-india">
+                    <img src="build/img/map-england.jpg" alt="map-india">
                 </a>
             </div>
         </div>
@@ -365,7 +363,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 col-sm-6">
-                    <a href="index.html" class="logo">
+                    <a href="index.html" class="navbar-brand">
                         <svg width="51" height="37" viewBox="0 0 51 37">
                             <use xlink:href="#logo-svg"></use>
                         </svg>
@@ -379,10 +377,10 @@
                         happiness Pleasure and praising pain was born and I will give you an account know that.
                     </p>
                     <i class="fas fa-phone-square"></i>
-                    <span>+9685 758-4157-60</span>
+                    <a href="tel:+9685758415760">+9685 758-4157-60</a>
                     <br>
                     <i class="fas fa-map-marker-alt"></i>
-                    <span>4197 Sumner Street LA, CA90017</span>
+                    <address>4197 Sumner Street LA, CA90017</address>
                     <br>
                     <i class="fas fa-globe"></i>
                     <span>Friends: <a href="www.statravel.co.uk">www.statravel.co.uk</a></span>
@@ -463,7 +461,7 @@
             </div>
         </div>
         <div class="container-fluid">
-            <span>Copyright © 2018 MOCCO Group Pty Limited</span>
+            <span>Copyright © 2018 <a href="http://www.themocogroup.com.au">MOCCO Group Pty Limited</a></span>
         </div>
     </footer>
 
@@ -516,12 +514,11 @@
     </div>
 </div>
 
-<script src="dev/js/jquery-3.3.1.js" defer></script>
-<script src="dev/js/popper.min.js" defer></script>
-<script src="dev/js/bootstrap/bootstrap.js" defer></script>
-<script src="dev/js/bootstrap/bootstrap.bundle.js" defer></script>
-<script src="dev/js/appendant.js" defer></script>
-<script src="dev/js/calculator.js" defer></script>
+<script src="build/js/jquery-3.3.1.min.js" defer></script>
+<script src="build/js/popper.min.js" defer></script>
+<script src="build/js/bootstrap.min.js" defer></script>
+<script src="build/js/bootstrap.bundle.min.js" defer></script>
+<script src="build/js/script.js" defer></script>
 </body>
 </html>
 
